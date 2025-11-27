@@ -29,3 +29,9 @@ bool({})  # return False
 in 
 not in
 """
+# Difference b/w is & ==?
+"""
+is checks if two variables point to the same object in memory (identity comparison).
+== checks if the values of two objects are equal (equality comparison).
+"""
+

@@ -40,3 +40,5 @@ del deletes an item by index or can delete slices or entire variables/lists.
 append() adds its argument as a single element at the end of the list.
 extend() adds each element of its argument (an iterable) individually to the end of the list.
 """
+# Diffn b/w deep copy vs shallow copy
+"""shallow copy shares nested objects, deep copy duplicates everything recursively"""
