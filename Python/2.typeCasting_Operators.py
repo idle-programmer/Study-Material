@@ -23,3 +23,9 @@ bool("")  # return False
 bool(())  # return False
 bool([])  # return False
 bool({})  # return False
+
+# What is membership Operators?
+"""
+in 
+not in
+"""

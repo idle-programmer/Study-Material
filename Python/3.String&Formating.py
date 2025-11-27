@@ -43,3 +43,10 @@ txt = f"My name is John, I am {age*10}"
 txt = f"My name is John, I am {age:.2f}"  # modifier is included by adding a colon ":"
 
 
+# ----Interview Questions---- #
+
+# How to check if all char in a string are alphanumeric
+print(txt.isalnum())
+
+# How to convert a string into an integer?
+print(int(float("42.2")))

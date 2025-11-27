@@ -28,3 +28,15 @@ mylist4 = mylist3[:]
 import copy
 
 mylist5 = copy.deepcopy(mylist4)  # deep copy
+
+# Interview Question
+# Diffn b/w remove() & del
+"""
+remove() deletes an item by value (removes the first occurrence).
+del deletes an item by index or can delete slices or entire variables/lists.
+"""
+# Diffn b/w append() & extend()
+"""
+append() adds its argument as a single element at the end of the list.
+extend() adds each element of its argument (an iterable) individually to the end of the list.
+"""
