@@ -24,6 +24,11 @@ bool(())  # return False
 bool([])  # return False
 bool({})  # return False
 
+# Operators
+# Arithmetic: +, -, *, /, %, **, //
+# Logical: and, or, not
+# Identity: is, is not
+
 # What is membership Operators?
 """
 in 
@@ -34,4 +39,3 @@ not in
 is checks if two variables point to the same object in memory (identity comparison).
 == checks if the values of two objects are equal (equality comparison).
 """
-
