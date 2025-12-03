@@ -27,8 +27,11 @@ def add_extra_steps():
 # Decorator With Arguments
 # Decorators can accept their own arguments by adding another wrapper level.
 def api_view(method):
+    print("api_view is called")
     def api_method(func):
+        print("api_method is called")
         def api():
+            func()
             if method == "POST":
                 print("This is a POST API")
             elif method == "GET":
@@ -41,6 +44,7 @@ def api_view(method):
 
 @api_view("POST")
 def login():
+    print("Login Function Called")
     return None
 
 

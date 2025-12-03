@@ -35,3 +35,21 @@ Inside the function, args becomes a tuple containing all the passed arguments:""
 """Arbitrary Keyword Arguments - **kwargs
 If you do not know how many keyword arguments will be passed into your function, add two asterisks ** before the parameter name.
 This way, the function will receive a dictionary of arguments and can access the items accordingly:"""
+
+
+# Function Variable scope
+# A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
+# As explained in the example above, the variable x is not available outside the function, but it is available for any function inside the function:
+def myfunc():
+    x = 300
+
+    def myinnerfunc():
+        print(x)
+
+    myinnerfunc()
+
+
+myfunc()
+
+
+# Recursion
