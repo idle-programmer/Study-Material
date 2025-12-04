@@ -14,6 +14,15 @@ tuple
 b = (1, 2, 3, 4)  # immutable
 range
 c = range(4)
+
+my_range = range(1, 1000001)  # Creates a range object, not a list
+
+# Iterate over some numbers – only the needed numbers are generated
+for i in my_range:
+    if i > 5:
+        break
+    print(i)
+
 str
 d = "my string"
 
