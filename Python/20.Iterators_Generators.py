@@ -1,7 +1,6 @@
 """
-An iterator is an object that contains a countable number of values.
-An iterator is an object that can be iterated upon, meaning that you can traverse through all the values.
-Technically, in Python, an iterator is an object which implements the iterator protocol, which consist of the methods __iter__() and __next__().
+An iterator is an object that contains a countable number of values and can be iterated upon, meaning you can traverse through all its values. 
+Technically, in Python, an iterator is an object that implements the iterator protocol, which consists of the methods __iter__() and __next__().
 """
 
 # Iterator vs Iterable
