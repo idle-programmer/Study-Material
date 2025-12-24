@@ -37,7 +37,7 @@ frozenset
 g = frozenset({"a", "b", "c"})
 
 """Boolean Type : Bool"""
-h = True / False
+h = True and False
 
 """Binary Type : bytes"""
 i = b"jkl"
@@ -93,3 +93,26 @@ In Python 3, xrange() is removed, and range() behaves like xrange() from Python 
 """Python is interpreted because there's no separate compilation step—you run source code directly.
 Internally, it compiles to bytecode first (hidden from user), then the PVM interprets bytecode line-by-line. 
 This gives immediate feedback but slower runtime vs fully compiled languages like C++."""
+
+#What is .py & .pyc?
+""".py = Source code (human-readable Python code you write).
+.pyc = Compiled bytecode (machine-readable, faster to load).
+
+| Aspect     | .py                        | .pyc                  |
+| ---------- | -------------------------- | --------------------- |
+| Content    | Source code                | Bytecode              |
+| Readable   | Yes                        | No                    |
+| Created by | You                        | Python automatically  |
+| Speed      | Slower (compile each time) | Faster (pre-compiled) |
+| Location   | Your project               | __pycache__/ folder   |
+
+.pyc speeds up imports by skipping recompilation. 
+Python checks .py timestamp—if changed, recompiles to new .pyc."""
+
+# what is pythonpath?
+"""PYTHONPATH is an environment variable that adds directories to sys.path. 
+Python searches these paths for modules during import. Useful for custom project 
+structures or local development.
+"""
+import sys
+print(sys.path)  # Shows all search paths (PYTHONPATH included)
