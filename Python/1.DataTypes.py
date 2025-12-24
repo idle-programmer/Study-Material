@@ -88,3 +88,8 @@ Examples of mutable data types include lists, dictionaries, and sets."""
 #4.What is range and xrange in Python?
 """ In Python 2, range() returns a list of numbers, while xrange() returns an xrange object that generates numbers on demand (more memory efficient). 
 In Python 3, xrange() is removed, and range() behaves like xrange() from Python 2, returning a range object that generates numbers on demand. """
+
+#Is python compiled lang or interpreted lang? Why?
+"""Python is interpreted because there's no separate compilation step—you run source code directly.
+Internally, it compiles to bytecode first (hidden from user), then the PVM interprets bytecode line-by-line. 
+This gives immediate feedback but slower runtime vs fully compiled languages like C++."""
