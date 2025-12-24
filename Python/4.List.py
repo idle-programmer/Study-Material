@@ -42,3 +42,28 @@ extend() adds each element of its argument (an iterable) individually to the end
 """
 # Diffn b/w deep copy vs shallow copy
 """shallow copy shares nested objects, deep copy duplicates everything recursively"""
+
+# List functions/methods
+lst = [1, 2, 3, 4]
+# methods
+lst.append(5)       # [1, 2, 3, 4, 5]
+lst.extend([6, 7])  # [1, 2, 3, 4, 5, 6, 7]
+lst.insert(1, 0)    # [1, 0, 2, 3, 4, 5, 6, 7]
+lst.pop()           # removes last: 7
+lst.remove(2)       # removes first 2
+lst.clear()         # empty list
+lst.index(1)        # position of 3
+lst.count(1)        # count of 1s
+lst.sort()          # sort in place
+lst.reverse()       # reverse in place
+lst.copy()          # shallow copy
+# build-in functions
+len(lst)            # length
+min(lst)            # minimum
+max(lst)            # maximum
+sum(lst)            # sum of numbers
+sorted(lst)         # new sorted list
+reversed(lst)       # iterator (list(reversed(lst)))
+
+squares = [x**2 for x in lst]  # list comprehension
+lst[1:4] # slicing

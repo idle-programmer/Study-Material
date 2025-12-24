@@ -49,3 +49,9 @@ def login():
 
 
 login()
+
+# Interview Questions
+
+# Can a function has multiple decorators, if yes then how they are executed by order?
+""" Yes, A function can have multiple decorators. They are applied from 
+the innermost (closest to the function) to the outermost."""

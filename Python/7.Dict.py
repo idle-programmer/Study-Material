@@ -20,3 +20,12 @@ y = 0
 thisdict = dict.fromkeys(x, y)
 thisdict = dict.fromkeys(x) # default value is None
 # setdefault() - returns value of specific key, if key does not exist insert key with specified value
+
+# Interview Questions
+
+# Sort Dictionary by keys and values
+from operator import itemgetter
+d={'a':2,'b':3,'c':1}
+s=sorted(d.items(),key=lambda x :x[1],reverse=True) # sort by values in descending order
+s1=sorted(d.items(),key=itemgetter(1)) # sort by values in ascending order, also this is fastest way
+s2=sorted(d.items()) # sort by keys in ascending order

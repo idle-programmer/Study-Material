@@ -21,7 +21,7 @@ class Animal(LivingBeing):
     def speak(self):
         return f"{self.name} does not speak"
     
-dog = Human("Dog")
+dog = Animal("Dog")
 print(dog.speak())  # Output: Dog does not speak
 
 
@@ -40,7 +40,7 @@ print(user1.name)  # Output: CharField(max_length=50)
 # Encapsulation: Bundling data and methods that operate on that data with in a single unit or class
 class User:
     def __init__(self,name):
-        self.__name=name  # private attribute
+        self.__name=name.upper()  # private attribute
 
     def get_name(self):
         return self.__name
@@ -53,6 +53,7 @@ from abc import ABC, abstractmethod
 class Payment(ABC):
     @abstractmethod
     def pay(self):
+        # some payment logic is implemented
         pass
 
 class UPI(Payment):
@@ -76,3 +77,29 @@ def animal_sound(animal):
 
 cat = Cat()
 print(animal_sound(cat))
+
+# Interview Questions
+# Goal/Benefits of using oops
+"""
+OOP helps us write code that is reusable, maintainable, 
+scalable and closer to real world scenarios.
+"""
+
+#What is method? Different types of methods in python?
+"""
+Methods are functions defined inside a class. They can be:
+1. Instance methods - operate on instance data
+2. Class methods - operate on class data (use @classmethod decorator)
+3. Static methods - operate independently of class or instance (use @staticmethod decorator)
+"""
+
+# What is instance?
+"""
+An instance is an object from a class that represents a real-world entity in memory.
+An instance is an individual object created from a class.
+Each instance has its own attributes and can call the methods defined in the class.
+"""
+# ⁠What is self in python?
+"""
+self refers to the instance of the class itself. It is used to access variables and methods associated with that specific instance.
+"""

@@ -39,3 +39,13 @@ not in
 is checks if two variables point to the same object in memory (identity comparison).
 == checks if the values of two objects are equal (equality comparison).
 """
+
+# Write a python program to add two numbers without using + operator
+def add(a,b):
+    while b!=0:
+        c=a&b
+        a=a^b
+        b=c<<1
+    return a
+
+print(add(2,3))
