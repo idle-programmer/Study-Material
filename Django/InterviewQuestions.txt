@@ -1,0 +1,81 @@
+What does REST mean?
+-> Representational State Tansfer, its an architecture style to write api to communicate of F-End to B-End using HTTP.
+Server is stateless.
+REST principles:
+Resource-based
+HTTP Methods
+Stateless
+Representation
+Client–Server separation
+
+What are RESTful Api?
+-> RESTful APIs are APIs that follow REST principles
+
+Difference b/w Django vs Fast API vs Flask
+->
+Django: Full Web Framework includes admin, ORM, auth, template.Uses WSGI
+FastAPI: API Framework,high-performance, async bydefault,used for microservice. Uses ASGI
+
+⁠How do you improve API response?
+->
+optimizing database queries: avoid N+1 query
+caching: by redis
+reducing payload size: by pagination
+indexing: on foreign keys, filter/search fields
+Async APIs
+background tasks
+Scaling infra: by multiple instance, loadbalancer
+
+
+⁠Which to use Django or Fast API?
+->
+Django: Business-heavy projects
+FastAPI: High Performance or microservice architecture, High-traffic public APIs
+
+⁠What is CSRF?
+->
+Security Attact where a malicious site forces a logged-in userr to perform 
+unintended actions on a trustes site using their authenticated session
+Example:
+User logs into a trusted site (e.g. bank.com)
+Session cookie is stored in the browser
+User visits a malicious website
+Malicious site sends a hidden request to bank.com
+Browser automatically attaches cookies
+Server thinks the request is genuine.
+
+CSRF in Django: Django enables CSRF protection by default.(CsrfViewMiddleware)
+
+
+What are URLs
+What are⁠ Models
+What are ⁠Views
+⁠Django project architecture 
+⁠ORM
+⁠Difference b/w project and app
+⁠Django caching
+⁠Authentication and Authorisation
+⁠How to obtain SQL query from queryset?
+⁠Explain select_related & prefetch_related
+⁠Q objects in Django
+Makemigrations
+⁠Migrates 
+⁠How django determines whether migrations are already applied?
+⁠What is stateless & stateful api?
+⁠Is RESTful APIs are stateful or stateless?
+What is package & module?
+⁠how do you handle complex queries in django
+Difference b/w flask and django
+⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
+Where redis stores the data?
+Difference b/w ⁠.get() & .filter()
+Have you faced memory leak issue and how did u solve 
+Authentication and authorisation in django
+How to secure api in django
+Put vs patch 
+Difference between gunicon and uvicon
+How to handle exception in django
+Components of jwt token
+How do u handle refresh token
+What is OAuth
+
