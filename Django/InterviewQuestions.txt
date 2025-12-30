@@ -1,4 +1,4 @@
-What does REST mean?
+*What does REST mean?
 -> Representational State Tansfer, its an architecture style to write api to communicate of F-End to B-End using HTTP.
 Server is stateless.
 REST principles:
@@ -8,33 +8,42 @@ Stateless
 Representation
 Client–Server separation
 
-What are RESTful Api?
--> RESTful APIs are APIs that follow REST principles
+*What are RESTful Api?
+-> APIs that follow REST principles
 
-Difference b/w Django vs Fast API vs Flask
+*⁠What is stateless & stateful api?
+->Stateless-API: request is treated independent transaction, no inherent memory of previous requests.
+Stateful-API: server maintain/retain info of client session/past interaction.
+
+*⁠RESTful APIs are stateful or stateless? ->RESTful APIs must be stateless
+*URLs in django-> mapping URLs to view functions/class
+*Models in django-> structure and behavior of db tables
+*⁠Views in django-> handle the business logic and data display
+*⁠Django project architecture-> Model-View-Template 
+*⁠ORM in django-> Pythonic way to interact with relational db without writing raw SQL code
+*⁠How to obtain SQL query from queryset-> str(my_queryset.query)
+
+*⁠How django determines whether migrations are already applied?
+->recording each successful migration in a dedicated db table called django_migrations
+
+*Q objects in Django?
+-> Q objects let you build flexible filters by combining conditions with OR, AND, and NOT, 
+so you can create more complex WHERE parts in the SQL queries that Django generates.
+
+
+*Difference b/w Django vs Fast API vs Flask
 ->
 Django: Full Web Framework includes admin, ORM, auth, template.Uses WSGI
 FastAPI: API Framework,high-performance, async bydefault,used for microservice. Uses ASGI
 
-⁠How do you improve API response?
-->
-optimizing database queries: avoid N+1 query
-caching: by redis
-reducing payload size: by pagination
-indexing: on foreign keys, filter/search fields
-Async APIs
-background tasks
-Scaling infra: by multiple instance, loadbalancer
-
-
-⁠Which to use Django or Fast API?
+*⁠Which to use Django or Fast API?
 ->
 Django: Business-heavy projects
 FastAPI: High Performance or microservice architecture, High-traffic public APIs
 
-⁠What is CSRF?
+*⁠What is CSRF?
 ->
-Security Attact where a malicious site forces a logged-in userr to perform 
+Security Attact where a malicious site forces a logged-in user to perform 
 unintended actions on a trustes site using their authenticated session
 Example:
 User logs into a trusted site (e.g. bank.com)
@@ -47,30 +56,23 @@ Server thinks the request is genuine.
 CSRF in Django: Django enables CSRF protection by default.(CsrfViewMiddleware)
 
 
-What are URLs
-What are⁠ Models
-What are ⁠Views
-⁠Django project architecture 
-⁠ORM
-⁠Difference b/w project and app
-⁠Django caching
-⁠Authentication and Authorisation
-⁠How to obtain SQL query from queryset?
-⁠Explain select_related & prefetch_related
-⁠Q objects in Django
-Makemigrations
-⁠Migrates 
-⁠How django determines whether migrations are already applied?
-⁠What is stateless & stateful api?
-⁠Is RESTful APIs are stateful or stateless?
-What is package & module?
+*Where redis stores the data? -> RAM
+
+*⁠How do you improve API response?
+->
+optimizing database queries: avoid N+1 query
+caching: by redis
+reducing payload size: by pagination
+indexing: on foreign keys, filter/search fields
+Async APIs
+background tasks
+Scaling infra: by multiple instance, loadbalancer
+
+
 ⁠how do you handle complex queries in django
-Difference b/w flask and django
+⁠Explain select_related & prefetch_related
 ⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
-Where redis stores the data?
-Difference b/w ⁠.get() & .filter()
 Have you faced memory leak issue and how did u solve 
-Authentication and authorisation in django
 How to secure api in django
 Put vs patch 
 Difference between gunicon and uvicon
