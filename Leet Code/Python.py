@@ -61,3 +61,11 @@ for i in l:
     seen.add(i)
 for pair in pairs:
     print(pair)
+
+#add digits until a single digit remains
+num = 38
+if num==0:
+    num=0
+else:
+    num=(1+(num-1)%9) # digital root formula
+print(num)

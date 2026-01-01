@@ -1,15 +1,8 @@
-*What does REST mean?
+*What does REST mean and what are RESTful Api?
 -> Representational State Tansfer, its an architecture style to write api to communicate of F-End to B-End using HTTP.
 Server is stateless.
-REST principles:
-Resource-based
-HTTP Methods
-Stateless
-Representation
-Client–Server separation
-
-*What are RESTful Api?
--> APIs that follow REST principles
+REST principles: Resource-based, HTTP Methods, Stateless, Representation, Client–Server separation.
+APIs that follow REST principles are RESTful Api
 
 *⁠What is stateless & stateful api?
 ->Stateless-API: request is treated independent transaction, no inherent memory of previous requests.
@@ -22,6 +15,10 @@ Stateful-API: server maintain/retain info of client session/past interaction.
 *⁠Django project architecture-> Model-View-Template 
 *⁠ORM in django-> Pythonic way to interact with relational db without writing raw SQL code
 *⁠How to obtain SQL query from queryset-> str(my_queryset.query)
+
+*Put vs patch?
+->PUT: Replaces entire resource
+PATCH: Updates partial resource
 
 *⁠How django determines whether migrations are already applied?
 ->recording each successful migration in a dedicated db table called django_migrations
@@ -56,7 +53,7 @@ Server thinks the request is genuine.
 CSRF in Django: Django enables CSRF protection by default.(CsrfViewMiddleware)
 
 
-*Where redis stores the data? -> RAM
+*Where redis stores the data and what is redis port? -> RAM, 6379
 
 *⁠How do you improve API response?
 ->
@@ -68,16 +65,51 @@ Async APIs
 background tasks
 Scaling infra: by multiple instance, loadbalancer
 
+*How to secure api in django?
+->
+JWT / OAuth
+DRF permissions
+CSRF protection (for session auth)
+Rate limiting (Redis)
+HTTPS
+Environment variables
 
-⁠how do you handle complex queries in django
+*How do you handle complex queries in django?
+->
+Q objects for complex AND/OR/NOT logic
+F expressions for field-to-field comparisons and in-database updates
+annotate() and aggregate()
+Subquery and OuterRef for nested queries
+select_related() / prefetch_related()
+
+
+*Have you faced memory leak issue and how did u solve
+->memory leaks can happen due to unclosed DB connections, infinite object references, or improper caching.
+Tools & Fixes: tracemalloc, objgraph, psutil, Fix circular references, Use generators instead of loading big lists,
+Close DB/file connections
+
+
+*Difference between gunicon and uvicon?->
+| Gunicorn         | Uvicorn                |
+| ---------------- | ---------------------- |
+| WSGI server      | ASGI server            |
+| Sync             | Async                  |
+| Django           | FastAPI / Async Django |
+| Slower for async | High performance       |
+
+
+How to handle exception in django
+*Components of jwt token? (total 3 component)
+-> Header: Token type (JWT), Algorithm (HS256, RS256)
+Payload: UserID, Roles, Expiry, Issued time
+Signature: secret_key
+
+*How do you handle refresh token(RT)?
+->Access tokens are short-lived, and RT are long-lived. When access token expires, 
+the client sends the RT to get a new access token. Blacklist RT on logout
+
+*What is OAuth?
+-> 
+
 ⁠Explain select_related & prefetch_related
 ⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
-Have you faced memory leak issue and how did u solve 
-How to secure api in django
-Put vs patch 
-Difference between gunicon and uvicon
-How to handle exception in django
-Components of jwt token
-How do u handle refresh token
-What is OAuth
-
