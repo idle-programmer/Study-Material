@@ -103,3 +103,16 @@ Each instance has its own attributes and can call the methods defined in the cla
 """
 self refers to the instance of the class itself. It is used to access variables and methods associated with that specific instance.
 """
+
+# What are dunder/magic methods?
+"""Methods in Python that start and end with double underscores (e.g., __init__, __str__). 
+They are used to define special behaviors for objects.
+Examples:
+1. __init__: Constructor method to initialize an object.
+2. __str__: Defines string representation of an object.
+3. __add__: Defines behavior for the + operator.
+4. __len__: Defines behavior for the len() function.
+5__iter__: Returns an iterator object for iteration."""
+
+# What is MRO?
+"""Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes."""

@@ -1,0 +1,5 @@
+Why you use elastic ip in ec2
+What is static ip in ec2
+How to connect to any aws service using a python library
+Debug in production 
+Cloud watch

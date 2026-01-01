@@ -98,7 +98,6 @@ Close DB/file connections
 | Slower for async | High performance       |
 
 
-How to handle exception in django
 *Components of jwt token? (total 3 component)
 -> Header: Token type (JWT), Algorithm (HS256, RS256)
 Payload: UserID, Roles, Expiry, Issued time
@@ -109,7 +108,18 @@ Signature: secret_key
 the client sends the RT to get a new access token. Blacklist RT on logout
 
 *What is OAuth?
--> 
+->OAuth is an open authorization protocol that allows third-party apps to access 
+user resources on a server without sharing credentials like passwords.(login by google, fb, etc)
+django-oauth-toolkit
 
-⁠Explain select_related & prefetch_related
+*⁠Explain select_related & prefetch_related?
+->select_related: one-to-one or foreign key, 
+eg: Author has one Book via ForeignKey "Author.objects.select_related('book')"
+prefetch_related: many-to-many or reverse foreign keys 
+eg: Book has many Reviews via ForeignKey reverse "Book.objects.prefetch_related('reviews')"
+
+*How to handle exception in django?
+->Using try-except blocks, Django middleware, and DRF global exception handlers.
+
 ⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
+Have you faced memory leak issue and how did u solve?

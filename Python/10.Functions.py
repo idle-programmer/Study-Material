@@ -89,3 +89,9 @@ print(total)  # 600
 
 # Recursion
 # Recursion is when a function calls itself.
+
+
+# Interview Questions
+# What is Method overloading & Method overriding?
+"""Overloading = same name, different params (use defaults/*args in Python). 
+Overriding = child redefines parent method (inheritance)."""
