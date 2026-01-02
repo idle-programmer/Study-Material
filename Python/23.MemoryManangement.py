@@ -72,3 +72,19 @@ y = demo()
 | function ends | stack cleaned           |
 | y exists      | heap object alive       |
 """
+
+# Multiprocessing and Multithreading
+"""""""""
+In Python:
+- Multiprocessing uses separate processes, each with its own memory space (CPU-bound tasks) eg: img process, computation, ML.
+- Multithreading shares memory within a single process (I/O-bound tasks) eg: file reading, api calls.
+Memory management in multiprocessing is more complex due to separate memory spaces.
+Memory management in multithreading is simpler but can have race conditions.
+"""
+
+# What is GIL
+"""GIL (Global Interpreter Lock) is a mutex that protects access to Python objects, 
+preventing multiple threads from executing Python bytecodes at once.
+This means that in a multi-threaded Python program, only one thread can execute Python code at a time, 
+which can be a bottleneck for CPU-bound tasks.
+However, it simplifies memory management and ensures thread safety for memory operations."""

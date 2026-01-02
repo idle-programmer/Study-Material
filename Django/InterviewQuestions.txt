@@ -8,7 +8,7 @@ APIs that follow REST principles are RESTful Api
 ->Stateless-API: request is treated independent transaction, no inherent memory of previous requests.
 Stateful-API: server maintain/retain info of client session/past interaction.
 
-*⁠RESTful APIs are stateful or stateless? ->RESTful APIs must be stateless
+*⁠RESTful APIs are stateful or stateless? -> RESTful APIs must be stateless
 *URLs in django-> mapping URLs to view functions/class
 *Models in django-> structure and behavior of db tables
 *⁠Views in django-> handle the business logic and data display
@@ -26,7 +26,6 @@ PATCH: Updates partial resource
 *Q objects in Django?
 -> Q objects let you build flexible filters by combining conditions with OR, AND, and NOT, 
 so you can create more complex WHERE parts in the SQL queries that Django generates.
-
 
 *Difference b/w Django vs Fast API vs Flask
 ->
@@ -51,7 +50,6 @@ Browser automatically attaches cookies
 Server thinks the request is genuine.
 
 CSRF in Django: Django enables CSRF protection by default.(CsrfViewMiddleware)
-
 
 *Where redis stores the data and what is redis port? -> RAM, 6379
 
@@ -83,8 +81,8 @@ Subquery and OuterRef for nested queries
 select_related() / prefetch_related()
 
 
-*Have you faced memory leak issue and how did u solve
-->memory leaks can happen due to unclosed DB connections, infinite object references, or improper caching.
+*Have you faced memory leak issue and how did u solve?
+-> Memory leaks can happen due to unclosed DB connections, infinite object references, or improper caching.
 Tools & Fixes: tracemalloc, objgraph, psutil, Fix circular references, Use generators instead of loading big lists,
 Close DB/file connections
 
@@ -104,22 +102,21 @@ Payload: UserID, Roles, Expiry, Issued time
 Signature: secret_key
 
 *How do you handle refresh token(RT)?
-->Access tokens are short-lived, and RT are long-lived. When access token expires, 
+-> Access tokens are short-lived, and RT are long-lived. When access token expires, 
 the client sends the RT to get a new access token. Blacklist RT on logout
 
 *What is OAuth?
-->OAuth is an open authorization protocol that allows third-party apps to access 
+-> OAuth is an open authorization protocol that allows third-party apps to access 
 user resources on a server without sharing credentials like passwords.(login by google, fb, etc)
 django-oauth-toolkit
 
 *⁠Explain select_related & prefetch_related?
-->select_related: one-to-one or foreign key, 
+-> select_related: one-to-one or foreign key, 
 eg: Author has one Book via ForeignKey "Author.objects.select_related('book')"
 prefetch_related: many-to-many or reverse foreign keys 
 eg: Book has many Reviews via ForeignKey reverse "Book.objects.prefetch_related('reviews')"
 
 *How to handle exception in django?
-->Using try-except blocks, Django middleware, and DRF global exception handlers.
+-> Using try-except blocks, Django middleware, and DRF global exception handlers.
 
 ⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
-Have you faced memory leak issue and how did u solve?
