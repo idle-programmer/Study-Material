@@ -48,11 +48,10 @@ m = None
 
 #Interview Questions
 #1. Differentiate between list, tuple, set, dictionary and Array?
-""" A list is an ordered, mutable collection that can contain duplicate and mixed data types. 
-Lists are indexed by integers and declared with square brackets, like. You can change, add, or remove items freely.​
+""" A list is an ordered, mutable , contain duplicate & mixed datatypes. Indexed by integers.
 
-A tuple is similar to a list but is immutable, meaning you cannot change its values once defined. 
-Tuples are also indexed and can contain mixed types and duplicates, declared with parentheses (1, 2, 3).​
+A tuple is immutable, meaning you cannot change its values once defined. 
+Indexed and contain mixed types & duplicates, declared with parentheses (1, 2, 3).​
 
 Sets are unordered, mutable collections with unique elements only. Unlike lists and tuples, sets do not support indexing 
 and are declared with curly braces {1, 2, 3}. They are useful for removing duplicates or performing set operations.​
@@ -64,7 +63,7 @@ Arrays are ordered, mutable, and typically hold elements of a single data type. 
 and are more memory-efficient if you need many numeric values. Arrays are declared with the array() function, e.g., array('i', )."""
 
 """
-A list in Python can store elements of different types, is built-in, and can grow or shrink dynamically. 
+A list can store elements of mixed types, is built-in, and can grow or shrink dynamically. 
 An array, on the other hand, stores only elements of the same data type, is more memory-efficient, 
 requires importing the array module, and is optimized for numerical operations.​
 Lists are best for general-purpose data storage with high flexibility, 

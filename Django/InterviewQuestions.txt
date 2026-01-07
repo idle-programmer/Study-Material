@@ -31,6 +31,7 @@ so you can create more complex WHERE parts in the SQL queries that Django genera
 ->
 Django: Full Web Framework includes admin, ORM, auth, template.Uses WSGI
 FastAPI: API Framework,high-performance, async bydefault,used for microservice. Uses ASGI
+Flask: Lightweight and flexible micro-framework.Uses WSGI
 
 *⁠Which to use Django or Fast API?
 ->

@@ -38,8 +38,9 @@ This way, the function will receive a dictionary of arguments and can access the
 
 
 # Function Variable scope
-# A variable created inside a function belongs to the local scope of that function, and can only be used inside that function.
-# As explained in the example above, the variable x is not available outside the function, but it is available for any function inside the function:
+"""A variable created inside a function belongs to the local scope of that function, 
+and can only be used inside that function. As explained in the example below, the variable x is
+not available outside the function, but it is available for any function inside the function:"""
 def myfunc():
     x = 300
 

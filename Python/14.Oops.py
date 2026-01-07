@@ -92,6 +92,22 @@ Methods are functions defined inside a class. They can be:
 2. Class methods - operate on class data (use @classmethod decorator)
 3. Static methods - operate independently of class or instance (use @staticmethod decorator)
 """
+class Student:
+    school = "ABC School"
+    def __init__(self, name):
+        self.name = name 
+    
+    def show(self):
+        print(f"{self.name}")
+
+    @classmethod
+    def change_school(cls, new_school):
+        cls.school = new_school
+
+    @staticmethod
+    def is_teenager(age):
+        return 13 <= age <= 19
+
 
 # What is instance?
 """
@@ -116,3 +132,19 @@ Examples:
 
 # What is MRO?
 """Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes."""
+class A:
+    def show(self):
+        print("A")
+
+class B(A):
+    def show(self):
+        print("B")
+
+class C(B):
+    def show(self):
+        print("C")
+
+class D(C, B):
+    pass
+
+D().show() # (D, C, B, A, object)
