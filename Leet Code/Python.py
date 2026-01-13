@@ -75,3 +75,25 @@ def isPalindrome(x: int) -> bool:
         if str(x)==str(x)[::-1]:
             return True
         return False
+
+# Move all zeros to the end of the list
+def shiftZero(l):
+    p=0
+    for i in range(len(l)):
+        if l[i]!=0:
+            l[p]=l[i]
+            p+=1
+        
+    while p<len(l):
+        l[p]=0
+        p+=1
+    return l 
+print(shiftZero([1,0,2,0,3]))
+
+# reverse list
+def reverseList(lst):
+    if not lst:
+        return []
+    return [lst[-1]] + reverseList(lst[:-1])
+
+print(reverseList([1,2,3,4,5]))

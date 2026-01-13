@@ -2,7 +2,6 @@
 def my_function(name):  # name is a parameter
     print("Hello", name)
 
-
 my_function("Emil")  # "Emil" is an argument
 
 """
@@ -10,7 +9,6 @@ Keyword Arguement and Positional Arguement
 my_function(fname, lname) , this is Positional Arguement
 my_function(name = "friend"), this is Keyword Arguement
 """
-
 
 """
 You can specify that a function can have ONLY positional arguments. To specify positional-only arguments, add , / after the arguments:
@@ -36,7 +34,6 @@ Inside the function, args becomes a tuple containing all the passed arguments:""
 If you do not know how many keyword arguments will be passed into your function, add two asterisks ** before the parameter name.
 This way, the function will receive a dictionary of arguments and can access the items accordingly:"""
 
-
 # Function Variable scope
 """A variable created inside a function belongs to the local scope of that function, 
 and can only be used inside that function. As explained in the example below, the variable x is
@@ -49,7 +46,6 @@ def myfunc():
 
     myinnerfunc()
 
-
 myfunc()
 
 # map() function
@@ -58,7 +54,6 @@ Take every item in a list, do something to it, and give me the new list.
 Syntax idea: map(function, iterable)
 It does: applies the function to each element, one by one.
 """
-
 new_prices = list(map(lambda p: p + 10, [100, 200, 300]))
 convert_to_int = list(map(int, ["2", "4", "6"]))
 print(new_prices, convert_to_int)
@@ -96,3 +91,10 @@ print(total)  # 600
 # What is Method overloading & Method overriding?
 """Overloading = same name, different params (use defaults/*args in Python). 
 Overriding = child redefines parent method (inheritance)."""
+
+# What are hooks in Python?
+"""Hooks in Python are extension points that allow developers to execute custom logic 
+at specific stages of program execution. They are commonly implemented using callbacks, 
+decorators, signals, or method overriding.
+example in django : @receiver(pre_save, sender=User), pre_save, post_save, 
+request_started, request_finished, transaction.on_commit()"""

@@ -1,0 +1,16 @@
+*What does REST mean and what are RESTful Api?
+-> Representational State Tansfer, its an architecture style to write api to communicate of F-End to B-End using HTTP.
+Server is stateless.
+REST principles: Resource-based, HTTP Methods, Stateless, Representation, Client–Server separation.
+APIs that follow REST principles are RESTful Api
+
+*⁠What is stateless & stateful api?
+->Stateless-API: request is treated independent transaction, no inherent memory of previous requests.
+Stateful-API: server maintain/retain info of client session/past interaction.
+
+*⁠RESTful APIs are stateful or stateless? -> RESTful APIs must be stateless
+
+
+*Put vs patch?
+->PUT: Replaces entire resource
+PATCH: Updates partial resource

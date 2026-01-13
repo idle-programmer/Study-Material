@@ -29,3 +29,14 @@ d={'a':2,'b':3,'c':1}
 s=sorted(d.items(),key=lambda x :x[1],reverse=True) # sort by values in descending order
 s1=sorted(d.items(),key=itemgetter(1)) # sort by values in ascending order, also this is fastest way
 s2=sorted(d.items()) # sort by keys in ascending order
+
+# ways to define dict?
+my_dict = {"name": "Alice", "age": 30, "city": "Mumbai"}
+keys=['a','b','c']
+my_dict = dict.fromkeys(keys, 0)
+squares = {x: x**2 for x in range(5)} # Comprehension
+values = [1, 2, 3]
+my_dict = dict(zip(keys, values))
+
+
+

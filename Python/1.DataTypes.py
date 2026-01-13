@@ -50,17 +50,17 @@ m = None
 #1. Differentiate between list, tuple, set, dictionary and Array?
 """ A list is an ordered, mutable , contain duplicate & mixed datatypes. Indexed by integers.
 
-A tuple is immutable, meaning you cannot change its values once defined. 
-Indexed and contain mixed types & duplicates, declared with parentheses (1, 2, 3).​
+Tuple =  immutable, meaning you cannot change its values once defined. 
+Indexed & contain mixed types & duplicates, declared with parentheses (1, 2, 3).​
 
-Sets are unordered, mutable collections with unique elements only. Unlike lists and tuples, sets do not support indexing 
-and are declared with curly braces {1, 2, 3}. They are useful for removing duplicates or performing set operations.​
+Sets = unordered, mutable collections with unique elements only. No indexing 
+& declared with curly braces {1, 2, 3}. They are useful for removing duplicates or performing set operations.​
 
-A dictionary is a mutable and unordered collection. It stores data as key-value pairs, where keys are unique 
-and values can be of any type. Dictionaries are declared with curly braces using the key:value syntax, such as {1: "a", 2: "b"}.​
+Dictionary =  mutable and unordered collection. Stores data as key-value pairs, where keys are unique 
+and values can be of any type. Declared with curly braces using the key:value syntax, such as {1: "a", 2: "b"}.​
 
-Arrays are ordered, mutable, and typically hold elements of a single data type. Unlike lists, arrays require importing the array module
-and are more memory-efficient if you need many numeric values. Arrays are declared with the array() function, e.g., array('i', )."""
+Arrays = ordered, mutable, and typically hold elements of a single data type. Require importing the array module
+and are more memory-efficient if you need many numeric values. Declared with the array() function, e.g., array('i', )."""
 
 """
 A list can store elements of mixed types, is built-in, and can grow or shrink dynamically. 

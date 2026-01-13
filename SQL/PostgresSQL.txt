@@ -1,0 +1,61 @@
+
+*⁠What is Index/indexing?
+->Index is a specialized data structure created on db columns to speed up data retrieval, 
+and indexing is the technique of using these structures to improve query performance on db tables.
+
+
+*⁠What is transaction in SQL?
+->A SQL transaction groups one or more db operations (like INSERT, UPDATE, DELETE)
+into a single atomic unit that either fully succeeds (COMMIT) or fully fails (ROLLBACK).
+syntax:
+START TRANSACTION; -- or BEGIN 
+UPDATE accounts SET balance = balance - 100 WHERE id = 1; 
+UPDATE accounts SET balance = balance + 100 WHERE id = 2; 
+COMMIT; -- Save changes 
+-- ROLLBACK; -- Undo if error
+
+
+*Normalization
+->Normalization reduces redundancy and improves data integrity by organizing data into proper tables.
+1NF: Atomic values, no repeating groups.
+2NF: 1NF + no partial dependencies (non-prime attributes depend on full key).
+3NF: 2NF + no transitive dependencies.
+Higher forms like BCNF handle edge cases.
+
+*⁠What is LIKE operator -> LIKE operator matches text patterns in a column
+
+*how do you optimise db query
+->
+Create indexes on frequently queried columns
+Replace SELECT * with explicit column names to fetch only needed data
+Use INNER JOINs over OUTER when possible
+Apply WHERE filters, LIMIT, or pagination before aggregations/JOINs
+Run EXPLAIN/EXPLAIN ANALYZE to inspect execution plans
+
+*⁠What is aggregate?
+->Aggregate functions in SQL perform calculations on a set of values 
+COUNT(),SUM(),AVG(),MIN() and MAX()
+​
+
+
+*What is the datatype to store array ? -> Array
+*What is the datatype to store json ? -> JSONB
+
+*⁠ACID properties -> Set of rules that ensure reliable and consistent transactions in a database.
+Atomicity: A transaction is all or nothing
+Consistency: Transaction moves the database from one valid state to another
+Isolation: Multiple transactions run independently
+Durability: Once a transaction is committed, data is permanent
+
+
+*How to optimize db with million data?
+Strategic Indexing: Create composite indexes on frequently joined/filtered columns
+Table Partitioning: Split large tables by date range, hash, or list.
+Query Optimization
+Read Replicas & Caching
+Hardware & Config
+
+
+*⁠How redis differ from MySQL?
+->Redis is an in-memory NoSQL key-value store optimized for speed and caching, 
+while MySQL is a disk-based relational SQL database designed for structured data and complex queries.

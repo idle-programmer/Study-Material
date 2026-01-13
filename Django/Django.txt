@@ -1,0 +1,65 @@
+*URLs in django-> mapping URLs to view functions/class
+*Models in django-> structure and behavior of db tables
+*⁠Views in django-> handle the business logic and data display
+*⁠Django project architecture-> Model-View-Template 
+*⁠ORM in django-> Pythonic way to interact with relational db without writing raw SQL code
+*⁠How to obtain SQL query from queryset-> str(my_queryset.query)
+
+* Middleware in Django?
+->  Global request/response processors that sit between the web server and your views.
+UseCase:
+Authentication & Authorization
+Security (CSRF, XSS, clickjacking)
+Logging & monitoring
+Request/response modification
+Rate limiting
+CORS handling
+Token validation
+Session management
+Encryption / Decryption logic (your use case)
+
+* How to write custom Middleware?
+-> Create middleware.py
+Write a class with __init__ and __call__
+Add it to settings.py → MIDDLEWARE
+Control request/response globally
+Use for auth, security, logging
+
+*⁠How django determines whether migrations are already applied?
+->recording each successful migration in a dedicated db table called django_migrations
+
+*Q objects in Django?
+-> Q objects let you build flexible filters by combining conditions with OR, AND, and NOT, 
+so you can create more complex WHERE parts in the SQL queries that Django generates.
+
+CSRF in Django: Django enables CSRF protection by default.(CsrfViewMiddleware)
+
+*How to secure api in django?
+->
+JWT / OAuth
+DRF permissions
+CSRF protection (for session auth)
+Rate limiting (Redis)
+HTTPS
+Environment variables
+
+*How do you handle complex queries in django?
+->
+Q objects for complex AND/OR/NOT logic
+F expressions for field-to-field comparisons and in-database updates
+annotate() and aggregate()
+Subquery and OuterRef for nested queries
+select_related() / prefetch_related()
+
+*⁠Explain select_related & prefetch_related?
+-> select_related: one-to-one or foreign key, 
+eg: Author has one Book via ForeignKey "Author.objects.select_related('book')"
+prefetch_related: many-to-many or reverse foreign keys 
+eg: Book has many Reviews via ForeignKey reverse "Book.objects.prefetch_related('reviews')"
+
+*How to handle exception in django?
+-> Using try-except blocks, Django middleware, and DRF global exception handlers.
+
+*what are Django Signals?
+Django Signals act as hooks that let different parts of your app react to db events 
+(like model saves or deletes) without tight coupling between components.

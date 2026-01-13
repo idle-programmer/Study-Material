@@ -9,7 +9,8 @@ containing all Python objects and data structures."""
 # How does Python manage memory?
 """Python manages memory using a combination of reference counting and  garbage collection.
 Reference counting keeps track of how many references point to an object. When the count drops to zero, the object is deallocated.
-Garbage collection handles circular references that reference counting alone cannot detect, ensuring all unreachable objects are eventually freed."""
+Garbage collection handles circular references that reference counting alone cannot detect, 
+ensuring all unreachable objects are eventually freed."""
 
 # Types of Memory in Python
 # Stack memory : stors local variables and function calls

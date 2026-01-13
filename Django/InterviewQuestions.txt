@@ -1,32 +1,3 @@
-*What does REST mean and what are RESTful Api?
--> Representational State Tansfer, its an architecture style to write api to communicate of F-End to B-End using HTTP.
-Server is stateless.
-REST principles: Resource-based, HTTP Methods, Stateless, Representation, Client–Server separation.
-APIs that follow REST principles are RESTful Api
-
-*⁠What is stateless & stateful api?
-->Stateless-API: request is treated independent transaction, no inherent memory of previous requests.
-Stateful-API: server maintain/retain info of client session/past interaction.
-
-*⁠RESTful APIs are stateful or stateless? -> RESTful APIs must be stateless
-*URLs in django-> mapping URLs to view functions/class
-*Models in django-> structure and behavior of db tables
-*⁠Views in django-> handle the business logic and data display
-*⁠Django project architecture-> Model-View-Template 
-*⁠ORM in django-> Pythonic way to interact with relational db without writing raw SQL code
-*⁠How to obtain SQL query from queryset-> str(my_queryset.query)
-
-*Put vs patch?
-->PUT: Replaces entire resource
-PATCH: Updates partial resource
-
-*⁠How django determines whether migrations are already applied?
-->recording each successful migration in a dedicated db table called django_migrations
-
-*Q objects in Django?
--> Q objects let you build flexible filters by combining conditions with OR, AND, and NOT, 
-so you can create more complex WHERE parts in the SQL queries that Django generates.
-
 *Difference b/w Django vs Fast API vs Flask
 ->
 Django: Full Web Framework includes admin, ORM, auth, template.Uses WSGI
@@ -50,9 +21,6 @@ Malicious site sends a hidden request to bank.com
 Browser automatically attaches cookies
 Server thinks the request is genuine.
 
-CSRF in Django: Django enables CSRF protection by default.(CsrfViewMiddleware)
-
-*Where redis stores the data and what is redis port? -> RAM, 6379
 
 *⁠How do you improve API response?
 ->
@@ -63,23 +31,6 @@ indexing: on foreign keys, filter/search fields
 Async APIs
 background tasks
 Scaling infra: by multiple instance, loadbalancer
-
-*How to secure api in django?
-->
-JWT / OAuth
-DRF permissions
-CSRF protection (for session auth)
-Rate limiting (Redis)
-HTTPS
-Environment variables
-
-*How do you handle complex queries in django?
-->
-Q objects for complex AND/OR/NOT logic
-F expressions for field-to-field comparisons and in-database updates
-annotate() and aggregate()
-Subquery and OuterRef for nested queries
-select_related() / prefetch_related()
 
 
 *Have you faced memory leak issue and how did u solve?
@@ -111,13 +62,8 @@ the client sends the RT to get a new access token. Blacklist RT on logout
 user resources on a server without sharing credentials like passwords.(login by google, fb, etc)
 django-oauth-toolkit
 
-*⁠Explain select_related & prefetch_related?
--> select_related: one-to-one or foreign key, 
-eg: Author has one Book via ForeignKey "Author.objects.select_related('book')"
-prefetch_related: many-to-many or reverse foreign keys 
-eg: Book has many Reviews via ForeignKey reverse "Book.objects.prefetch_related('reviews')"
-
-*How to handle exception in django?
--> Using try-except blocks, Django middleware, and DRF global exception handlers.
+what is webhook ?
+->A webhook is an HTTP callback that delivers real-time data from one application 
+to another when specific events occur, enabling event-driven communication without polling.
 
 ⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
