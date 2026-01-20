@@ -1,0 +1,46 @@
+create  table: 
+create table tb_name (
+    id int primary key,
+    clm2 varchar(50)
+);
+
+add foreign key:
+alter table tb_name fk_dpt_id
+foreign key (dpt_id) reference department(id);
+
+delete syntax :
+delete from tb_name where id=10;
+truncate table tb_name; #delete all rows
+drop table tb_name; #delete table completely
+
+where syntax:
+select clm1,clm2
+from tb_name where id=10;
+
+having syntax:
+select dpt, avg(salary) as avgSalary
+from tb_name
+group by dpt
+having avg(salary)>5000;
+
+join syntax:
+select tb1.clm1, tb2.clm2
+from tb1 inner join tb2
+on tb1.common_clm = tb2.common_clm;
+
+index syntax:
+create index index_name on tb_name(clm1);
+
+trigger syntax: 
+create trigger trigger name 
+after insert 
+on tb_name
+for each rows
+begin
+    sql_statement;
+end;
+
+transaction syntax:
+begin transaction;
+update query
+commit;

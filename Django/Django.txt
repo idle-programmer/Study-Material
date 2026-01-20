@@ -45,11 +45,11 @@ Environment variables
 
 *How do you handle complex queries in django?
 ->
-Q objects for complex AND/OR/NOT logic
-F expressions for field-to-field comparisons and in-database updates
-annotate() and aggregate()
-Subquery and OuterRef for nested queries
 select_related() / prefetch_related()
+Q objects for complex AND/OR/NOT logic
+annotate() and aggregate()
+F expressions for field-to-field comparisons and in-database updates
+Subquery and OuterRef for nested queries
 
 *⁠Explain select_related & prefetch_related?
 -> select_related: one-to-one or foreign key, 
@@ -63,3 +63,68 @@ eg: Book has many Reviews via ForeignKey reverse "Book.objects.prefetch_related(
 *what are Django Signals?
 Django Signals act as hooks that let different parts of your app react to db events 
 (like model saves or deletes) without tight coupling between components.
+
+how do select_related and prefetch_related works internally ?
+select_related: Uses SQL JOIN.
+prefetch_related: Executes separate queries
+Joins data in Python memory, Uses IN clause
+
+*Why Django uses this approach in prefetch_related?
+->SQL JOIN would duplicate rows.
+JOINs explode result set for M2M.
+Python-side join is safer & efficient.
+
+**How do u handle concurrency issue in python/django?
+| Task Type                         | Solution          | Why                         |
+| --------------------------------- | ----------------- | --------------------------- |
+| I/O-bound (API calls, DB queries) | asyncio + aiohttp | Single thread, non-blocking |
+| CPU-bound (image processing, ML)  | multiprocessing   | Bypasses GIL                |
+| Mixed Django                      | Celery + Redis    | Task queue                  |
+
+
+**How would you know if the Background task has fail and how do u rectify it? in fastapi or django?
+->"Django: Flower dashboard + Celery signals for failure alerts (@task_failure.connect). 
+task_acks_late=True prevents lost tasks on worker crash. 
+Supervisor auto-restarts workers. Redis monitoring for queue depth.
+
+FastAPI: BackgroundTasks lacks retries—use Celery or RQ instead.
+Log exceptions to DB, add task_reject_on_worker_lost=True."
+
+
+**If a db column has unique constraint and a async api tries to add same value at a time what will happen?
+->"Unique constraint causes IntegrityError for duplicates. First transaction wins, 
+others fail and retry. Best fix: `ON CONFLICT DO NOTHING` (PostgreSQL) or 
+`get_or_create()`. Never SELECT → INSERT without locks—race condition guaranteed."
+
+
+**Which is faster save or update?
+->update() is faster than save() because it executes a direct SQL update without loading model instances,
+but it bypasses validation and signals, so save() is preferred when business logic is required.
+
+
+**How to make django asynchronous?
+->Django supports async views, middleware, and ASGI via asgi.py. Async is useful for I/O-bound 
+tasks like API calls and WebSockets, but the ORM is still synchronous and must be accessed using 
+sync_to_async. Django is async-capable, not fully async
+
+**Types of Serializers in Django?
+-> Django Core Serializers (django.core.serializers): Export/import data ,Raw model state
+DRF Serializers (rest_framework.serializers.Serializer): Custom validation, non-model APIs
+DRF ModelSerializers (rest_framework.serializers.ModelSerializer): 90% of APIs,Fields, validation, querysets -> JSON
+
+
+**Uses of Serializers?
+| #                   | Use Case            | Example                                     |
+| ------------------- | ------------------- | ------------------------------------------- |
+| 1. Data Conversion  | Model → JSON        | User.objects.all() → [{id:1, name:"Alice"}] |
+| 2. Validation       | Clean incoming data | Email format, required fields, custom rules |
+| 3. Deserialization  | JSON → Model        | POST {'name':'Bob'} → User.objects.create() |
+| 4. Nested Relations | Related objects     | OrderSerializer includes UserSerializer()   |
+| 5. API Responses    | Standardized output | Hide password, format dates                 |
+
+
+** How you handle make migration issues, many of the time happens like we have made changes
+in our model but the makemigration command says not changes found, whats the issue and how do 
+you resolve it?
+-> "Three checks: 1) INSTALLED_APPS, 2) migrations/__init__.py exists, 3) models imported in __init__.py. 
+Run `makemigrations -v 3 appname` for verbose output. Worst case: `--empty` migration + manual SQL."

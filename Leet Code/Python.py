@@ -97,3 +97,15 @@ def reverseList(lst):
     return [lst[-1]] + reverseList(lst[:-1])
 
 print(reverseList([1,2,3,4,5]))
+
+# Check Correct String
+def correctStr(str1):
+    p=0
+    for i in str1:
+        if i =='(':
+            p+=1
+        elif i==')':
+            p-=1
+    return True if p==0 else False
+str1='(hello(world)(one)two)'
+print(correctStr(str1))

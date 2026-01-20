@@ -1,0 +1,27 @@
+*Components of jwt token? (total 3 component)
+-> Header: Token type (JWT), Algorithm (HS256, RS256)
+Payload: UserID, Roles, Expiry, Issued time
+Signature: secret_key
+
+*How do you handle refresh token(RT)?
+-> Access tokens are short-lived, and RT are long-lived. When access token expires, 
+the client sends the RT to get a new access token. Blacklist RT on logout
+
+
+How to secure JWT from vulnerablility?
+-> 1.Short-lived access tokens
+2. Use HTTPS always
+3. Secure storage: HttpOnly + Secure cookies (preferred)
+4. Strong signing algorithm: RS256
+5. Add claims
+exp → expiry
+iat → issued at
+aud, iss → validation
+jti → unique token id
+6. Token rotation: Refresh token changes every time
+7. Blacklisting: Store revoked tokens in Redis
+
+What will you do if ur JWT token gets compromised?
+->If a JWT is compromised, I immediately revoke it using a blacklist, 
+invalidate refresh tokens, force re-login, rotate keys if required, and monitor suspicious activity.
+

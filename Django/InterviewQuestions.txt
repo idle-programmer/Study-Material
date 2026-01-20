@@ -24,14 +24,21 @@ Server thinks the request is genuine.
 
 *⁠How do you improve API response?
 ->
+reducing payload size: by pagination
 optimizing database queries: avoid N+1 query
 caching: by redis
-reducing payload size: by pagination
 indexing: on foreign keys, filter/search fields
 Async APIs
 background tasks
 Scaling infra: by multiple instance, loadbalancer
 
+How to check if API response time is improved?
+->
+Using Postman
+Using Browser DevTools
+Django ORM query timing (connection.queries)
+Using logging middleware (making custom middleware)
+PostgreSQL level (EXPLAIN ANALYZE..)
 
 *Have you faced memory leak issue and how did u solve?
 -> Memory leaks can happen due to unclosed DB connections, infinite object references, or improper caching.
@@ -48,14 +55,7 @@ Close DB/file connections
 | Slower for async | High performance       |
 
 
-*Components of jwt token? (total 3 component)
--> Header: Token type (JWT), Algorithm (HS256, RS256)
-Payload: UserID, Roles, Expiry, Issued time
-Signature: secret_key
 
-*How do you handle refresh token(RT)?
--> Access tokens are short-lived, and RT are long-lived. When access token expires, 
-the client sends the RT to get a new access token. Blacklist RT on logout
 
 *What is OAuth?
 -> OAuth is an open authorization protocol that allows third-party apps to access 

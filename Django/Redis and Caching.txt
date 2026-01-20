@@ -1,1 +1,37 @@
 *Where redis stores the data and what is redis port? -> RAM, 6379
+Cache Eviction policies?
+->When cache is full → which item to remove?
+| Policy | Logic                        | Use Case                 | Django/Redis Example            |
+| ------ | ---------------------------- | ------------------------ | ------------------------------- |
+| LRU    | Remove Least Recently Used   | Web pages, API responses | redis.Redis().setex() (default) |
+| LFU    | Remove Least Frequently Used | Images, static assets    | Long-term trending data         |
+| FIFO   | Remove First In              | Logs, sequential data    | Simple queues                   |
+| LIFO   | Remove Last In               | Stack operations         | Undo history                    |
+
+**Q: "LRU vs LFU?"**
+A: "LRU for recency (user sessions, API cache). 
+   LFU for frequency (popular articles). 
+   LRU faster to implement, LFU better hit ratio long-term."
+
+**Q: "Redis eviction?"** 
+A: "Redis: allkeys-lru (default), maxmemory-policy allkeys-lfu, 
+   volatile-ttl (time-based). Django-redis uses LRU."
+
+**Q: "Django cache choice?"**
+A: "LocMemCache: LRU (dev). Redis: allkeys-lru (prod). 
+   Memcached: LRU. Set CACHE_TTL for volatile keys."
+
+
+# settings.py
+CACHES = {
+    'default': {
+        'BACKEND': 'django_redis.cache.RedisCache',
+        'LOCATION': 'redis://127.0.0.1:6379/1',
+        'OPTIONS': {
+            'CLIENT_CLASS': 'django_redis.client.DefaultClient',
+            'MAX_CONNECTIONS': 50
+        }
+    }
+}
+# redis.conf: maxmemory 256mb
+# maxmemory-policy allkeys-lru
