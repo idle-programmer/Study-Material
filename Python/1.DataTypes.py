@@ -115,3 +115,15 @@ structures or local development.
 """
 import sys
 print(sys.path)  # Shows all search paths (PYTHONPATH included)
+
+
+# Mutable vs Immutable
+"""
+| Aspect        | Mutable Objects                                   | Immutable Objects                             |
+| ------------- | ------------------------------------------------- | --------------------------------------------- |
+| Definition    | Can be changed after creation                     | Cannot be changed after creation              |
+| Identity      | Memory address stays same (in-place modification) | New object created (different memory address) |
+| Thread Safety | Not thread-safe (race conditions possible)        | Inherently thread-safe                        |
+| Hashing       | Not hashable (can't be dict keys/sets)            | Hashable (perfect for dict keys/sets)         |
+| Performance   | Fast in-place changes                             | Slower changes, faster reads/caching          |
+"""

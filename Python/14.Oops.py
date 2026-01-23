@@ -148,3 +148,32 @@ class D(C, B):
     pass
 
 D().show() # (D, C, B, A, object)
+
+# What is monkey patching?
+"""
+Monkey patching is a programming technique used to dynamically
+modify or extend the behaviour of class, module, or function at 
+runtime without altering its original code.
+
+# original_module.py
+class MyClass:
+    def say_hello(self):
+        return "Hello, Welcome to the original class!"
+
+# main_script.py
+from original_module import MyClass
+
+def new_say_hello(self):
+    return "Greetings! The class has been monkey patched!"
+
+MyClass.say_hello = new_say_hello
+obj = MyClass()
+print(obj.say_hello()) # output = Greetings! The class has been monkey patched!
+
+
+| #                   | Monkey Patching           | Decorator                                   |
+| ------------------- | ------------------------- | ------------------------------------------- |
+| 1. Timing           | Applied at runtime        | Applied at definition time                  |
+| 2. Mechanism        | Class.method = new_method | function/class as an argument, @ syntax     |
+| 3. Scope            | global change             | impacts only the specific function or class |
+"""

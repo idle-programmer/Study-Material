@@ -8,7 +8,6 @@ appropriate notification object based on user input.
 3) Database drivers (MySQL, PostgreSQL, SQLite)
 """
 
-
 class MySQLdb:
     def connect(self):
         print("Connecting to MySQL Database")

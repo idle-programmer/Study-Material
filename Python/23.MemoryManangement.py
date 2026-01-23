@@ -22,9 +22,7 @@ func()
 a = [1, 2, 3] # list object is on heap
 
 # Private Python memory manager : manages heap memory allocation
-
 # Garbage Collection : reclaims memory from unreachable objects, especially in circular references
-
 # Circular Reference Example
 a = []
 b = []
@@ -89,3 +87,19 @@ preventing multiple threads from executing Python bytecodes at once.
 This means that in a multi-threaded Python program, only one thread can execute Python code at a time, 
 which can be a bottleneck for CPU-bound tasks.
 However, it simplifies memory management and ensures thread safety for memory operations."""
+
+# How do you release memory in Python?
+"""
+* Remove References
+my_large_object = [...]
+del my_large_object
+
+* Set to None
+my_large_object = None 
+
+* Manually Trigger Garbage Collection
+import gc
+del my_large_object
+gc.collect()
+"""
+

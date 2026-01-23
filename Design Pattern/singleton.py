@@ -7,7 +7,6 @@ Example:
 2) Logging
 """
 
-
 class ControlTower:
     __instance = None
 
