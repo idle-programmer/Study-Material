@@ -98,3 +98,27 @@ at specific stages of program execution. They are commonly implemented using cal
 decorators, signals, or method overriding.
 example in django : @receiver(pre_save, sender=User), pre_save, post_save, 
 request_started, request_finished, transaction.on_commit()"""
+
+# Problem Statement:Create a Python function called compose that takes an 
+# arbitrary number of functions as arguments and returns a new function. This new 
+# function should represent the mathematical composition of all input functions, applied from right to left 
+# f(x) * g(x) = f(g(x)) 
+# f(x) = 2x+1 
+# g(x) = x^2 
+# for x = 2, answer = 9
+
+def compose(*functions):
+    def composed(x):
+        for f in reversed(functions):
+            x=f(x)
+        return x
+    return composed
+
+def f(x):
+    return 2 * x + 1
+
+def g(x):
+    return x * x
+
+solver = compose(f,g)
+print(solver(2))

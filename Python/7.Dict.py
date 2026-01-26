@@ -38,5 +38,10 @@ squares = {x: x**2 for x in range(5)} # Comprehension
 values = [1, 2, 3]
 my_dict = dict(zip(keys, values))
 
-
+# Can we use mutable objects as key?
+"""
+No, built-in mutable objects like lists, dictionaries, and sets cannot be used as keys 
+in a Python dictionary. Dictionary keys must be hashable, meaning their hash value cannot 
+change during their lifetime, a property exclusive to immutable objects. 
+"""
 
