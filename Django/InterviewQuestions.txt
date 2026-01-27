@@ -67,3 +67,16 @@ what is webhook ?
 to another when specific events occur, enabling event-driven communication without polling.
 
 ⁠what is the meaning of DEBUG = TRUE in django.Is it set to True or False in prod environment?
+
+What is Pub/Sub?
+->Pub/Sub is a messaging pattern where publishers send messages to a topic and all subscribed consumers 
+receive those messages asynchronously without direct coupling.
+Publisher sends a message to a topic
+Broker (Redis, Kafka, etc.) receives it
+All subscribers listening to that topic get the message.
+
+Difference between authentication and authorization?
+->Authentication vs Authorization – What's the difference?Authentication verifies 
+a user's identity (who you are) using credentials like passwords or biometrics, 
+while Authorization determines their permissions (what you can do) after login.
+

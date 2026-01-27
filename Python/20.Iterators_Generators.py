@@ -64,7 +64,7 @@ range is a built-in iterable that generates numbers on demand without storing th
 """
 
 # Difference b/w normal function and generator function
-"""| Aspect      | Normal Function                          | Generator Function                   |
+"""| Aspect   | Normal Function                          | Generator Function                   |
 | ----------- | ---------------------------------------- | ------------------------------------ |
 | Keyword     | return                                   | yield                                |
 | Execution   | Runs completely, returns one value, ends | Pauses at yield, resumes next time   |

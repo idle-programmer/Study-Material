@@ -1,3 +1,12 @@
+What is JWT?
+A JWT (JSON Web Token) is an open standard (RFC 7519) that defines a compact, URL-safe way 
+to securely transmit information between parties (usually client and server) as a JSON object. 
+They are primarily used for authentication and authorization in web applications and APIs, allowing 
+servers to verify user identities without keeping session data in memory. 
+
+
+
+
 *Components of jwt token? (total 3 component)
 -> Header: Token type (JWT), Algorithm (HS256, RS256)
 Payload: UserID, Roles, Expiry, Issued time
@@ -25,3 +34,5 @@ What will you do if ur JWT token gets compromised?
 ->If a JWT is compromised, I immediately revoke it using a blacklist, 
 invalidate refresh tokens, force re-login, rotate keys if required, and monitor suspicious activity.
 
+Any authentication mechanism other than JWT?
+->OAuth 2.0, OpenID Connect, Session-based Auth, SSO, OTP

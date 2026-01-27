@@ -42,6 +42,8 @@ CSRF protection (for session auth)
 Rate limiting (Redis)
 HTTPS
 Environment variables
+Validate and Sanitize All Input
+Minimize Data Exposure
 
 *How do you handle complex queries in django?
 ->
@@ -128,3 +130,9 @@ in our model but the makemigration command says not changes found, whats the iss
 you resolve it?
 -> "Three checks: 1) INSTALLED_APPS, 2) migrations/__init__.py exists, 3) models imported in __init__.py. 
 Run `makemigrations -v 3 appname` for verbose output. Worst case: `--empty` migration + manual SQL."
+
+How do you achieve authentication in Django?
+-> Authentication in Django is achieved using its built-in, session-based authentication system (django.contrib.auth), 
+which handles users, groups, permissions, and cookie-based sessions by default. For APIs, token-based methods are commonly used, 
+often with packages like Django REST Framework (DRF).
+
