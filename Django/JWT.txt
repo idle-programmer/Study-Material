@@ -5,8 +5,6 @@ They are primarily used for authentication and authorization in web applications
 servers to verify user identities without keeping session data in memory. 
 
 
-
-
 *Components of jwt token? (total 3 component)
 -> Header: Token type (JWT), Algorithm (HS256, RS256)
 Payload: UserID, Roles, Expiry, Issued time
@@ -36,3 +34,24 @@ invalidate refresh tokens, force re-login, rotate keys if required, and monitor 
 
 Any authentication mechanism other than JWT?
 ->OAuth 2.0, OpenID Connect, Session-based Auth, SSO, OTP
+
+What is Encryption, Hashing and Encoding?
+Encryption: Process of converting data into an unreadable format using a **key** to protect confidentiality
+Hashing: Process of converting data into a **fixed-length value** to verify integrity
+Encoding: Process of converting data into another format so it can be **safely transmitted or stored**
+
+
+
+| Aspect                | **Encryption**                           | **Hashing**                         | **Encoding**                        |
+| --------------------- | ---------------------------------------- | ----------------------------------- | ----------------------------------- |
+| **Reversible**        | ✅ Yes (using a key)                     | ❌ No (one-way)                     | ✅ Yes                              |
+| **Uses a Key**        | ✅ Yes (public/private or secret key)    | ❌ No key                           | ❌ No key                           |
+| **Main Purpose**      | Data security & confidentiality          | Data integrity & password storage   | Data compatibility & transmission   |
+| **Output Length**     | Variable                                 | Fixed                               | Variable                            |
+| **Common Algorithms** | AES, RSA                                 | SHA-256, MD5                        | Base64, URL Encoding                |
+| **Example Use Case**  | Encrypting JWTs, sensitive API data      | Storing passwords securely          | Encoding binary data for HTTP       |
+| **Security Level**    | High                                     | Very High (cannot be reversed)      | ❌ Not secure                       |
+
+Is JWT Encrypted?
+->JWT is encoded for transport, signed using hashing (RS256) for integrity, and not encrypted
+by default—so payload data is readable but tamper-proof.

@@ -59,3 +59,10 @@ Hardware & Config
 *⁠How redis differ from MySQL?
 ->Redis is an in-memory NoSQL key-value store optimized for speed and caching, 
 while MySQL is a disk-based relational SQL database designed for structured data and complex queries.
+
+
+
+| Clause   | When it runs      | Used for            |
+| -------- | ----------------- | ------------------- |
+| `WHERE`  | Before `GROUP BY` | Row-level filtering |
+| `HAVING` | After `GROUP BY`  | Aggregate filtering |

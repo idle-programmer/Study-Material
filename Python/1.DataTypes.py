@@ -34,7 +34,7 @@ e = {"key": "value"}
 set
 f = {"a", "b", "c"}
 frozenset
-g = frozenset({"a", "b", "c"})
+g = frozenset({"a", "b", "c"}) # immutable
 
 """Boolean Type : Bool"""
 h = True and False
@@ -51,13 +51,13 @@ m = None
 """ A list is an ordered, mutable , contain duplicate & mixed datatypes. Indexed by integers.
 
 Tuple =  immutable, meaning you cannot change its values once defined. 
-Indexed & contain mixed types & duplicates, declared with parentheses (1, 2, 3).​
+Indexed & contain mixed types & duplicates, declared with parentheses (1, 2, 3).
 
 Sets = unordered, mutable collections with unique elements only. No indexing 
-& declared with curly braces {1, 2, 3}. They are useful for removing duplicates or performing set operations.​
+& declared with curly braces {1, 2, 3}. They are useful for removing duplicates or performing set operations.
 
 Dictionary =  mutable and unordered collection. Stores data as key-value pairs, where keys are unique 
-and values can be of any type. Declared with curly braces using the key:value syntax, such as {1: "a", 2: "b"}.​
+and values can be of any type. Declared with curly braces using the key:value syntax, such as {1: "a", 2: "b"}.
 
 Arrays = ordered, mutable, and typically hold elements of a single data type. Require importing the array module
 and are more memory-efficient if you need many numeric values. Declared with the array() function, e.g., array('i', )."""
@@ -65,8 +65,8 @@ and are more memory-efficient if you need many numeric values. Declared with the
 """
 A list can store elements of mixed types, is built-in, and can grow or shrink dynamically. 
 An array, on the other hand, stores only elements of the same data type, is more memory-efficient, 
-requires importing the array module, and is optimized for numerical operations.​
-Lists are best for general-purpose data storage with high flexibility, 
+requires importing the array module, and is optimized for numerical operations.
+Lists are best for general-purpose data storage with high flexibility,
 while arrays are preferred for handling large amounts of numeric data where performance and memory efficiency are important.
 """
 #2. What are built-in data types in Python?

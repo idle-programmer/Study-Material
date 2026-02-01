@@ -28,3 +28,27 @@ like network calls, DB queries, or file operations, within a single thread of ex
 They allow a program to efficiently manage multiple I/O-bound tasks by cooperatively switching
 between tasks when one is waiting for an operation to complete, instead of blocking the entire program.
 """
+
+
+
+# Difference between Async/Await, AsyncIO, and Threading
+
+"""
+| Feature               | **Async / Await**                          | **AsyncIO**                                  | **Threading**                     |
+| --------------------- | ------------------------------------------ | -------------------------------------------- | --------------------------------- |
+| **What it is**        | Syntax to write asynchronous code          | Python library for async programming         | Technique to run multiple threads |
+| **Purpose**           | Makes async code readable and non-blocking | Manages event loop, tasks, coroutines        | Runs tasks in parallel threads    |
+| **Level**             | Language feature (syntax)                  | Framework / library                          | OS-level concept                  |
+| **Execution model**   | Single thread, cooperative multitasking    | Single thread with event loop                | Multiple threads                  |
+| **Parallelism**       | ❌ No                                      | ❌ No                                        | ⚠️ Limited (due to GIL)           |
+| **Concurrency**       | ✅ Yes                                     | ✅ Yes                                       | ✅ Yes                            |
+| **Blocking behavior** | Non-blocking (when awaited)                | Non-blocking                                 | Can block other threads           |
+| **Best for**          | Writing async code cleanly                 | High I/O operations (API calls, DB, sockets) | I/O tasks, background work        |
+| **CPU-bound tasks**   | ❌ Poor                                    | ❌ Poor                                      | ❌ Poor (GIL issue)               |
+| **I/O-bound tasks**   | ✅ Excellent                               | ✅ Excellent                                 | ✅ Good                           |
+| **Uses GIL?**         | ✅ Yes                                     | ✅ Yes                                       | ✅ Yes                            |
+| **Context switching** | Very fast (cooperative)                    | Very fast (event loop)                       | Slow (OS managed)                 |
+| **Memory usage**      | Low                                        | Low                                          | High                              |
+| **Complexity**        | Easy                                       | Medium                                       | Easy-Medium                       |
+| **Example usage**     | `await fetch_data()`                       | `asyncio.gather()`                           | `threading.Thread()`              |
+"""

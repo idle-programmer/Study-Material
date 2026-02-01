@@ -20,3 +20,17 @@ thisset.update(mylist)
 # del keyword will delete the set
 
 
+# How is data stored in a set? 
+"""
+Set: Hash-based storage
+
+How it's stored internally:
+A set uses a hash table. Each element's hash value decides where it is stored.
+Elements are not stored in order.
+
+Key characteristics:
+❌ Unordered
+❌ No duplicates
+❌ No indexing
+✅ Very fast lookup (O(1) average)
+"""

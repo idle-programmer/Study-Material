@@ -55,8 +55,6 @@ Close DB/file connections
 | Slower for async | High performance       |
 
 
-
-
 *What is OAuth?
 -> OAuth is an open authorization protocol that allows third-party apps to access 
 user resources on a server without sharing credentials like passwords.(login by google, fb, etc)

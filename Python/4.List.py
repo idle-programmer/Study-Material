@@ -67,3 +67,18 @@ reversed(lst)       # iterator (list(reversed(lst)))
 
 squares = [x**2 for x in lst]  # list comprehension
 lst[1:4] # slicing
+
+# How is data stored in a list?
+"""
+List: Ordered & Indexed storage
+
+How it's stored internally:
+A list stores elements in a contiguous memory array. Each element is stored with an index.
+The list actually stores references (pointers) to objects, not the objects themselves
+
+Key characteristics:
+✅ Ordered
+✅ Allows duplicates
+✅ Index-based access
+❌ Slower lookup (O(n))
+"""
