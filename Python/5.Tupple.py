@@ -19,3 +19,17 @@ fruits = ("apple", "banana", "cherry", "strawberry", "raspberry")
 print(red)  # prints a list of elements
 # count()
 # index()
+
+
+# how does tupple stores data?
+"""
+Tuples store references to objects in a fixed-size array of object pointers, 
+similar to lists, but are immutable—meaning their references can't be changed or resized.
+"""
+
+"""
+A tuple can store different data types, but it is immutable, 
+so its elements cannot be changed once created. However, 
+mutable objects inside a tuple can be modified.
+"""
+

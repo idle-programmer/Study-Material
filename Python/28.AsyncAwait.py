@@ -52,3 +52,17 @@ between tasks when one is waiting for an operation to complete, instead of block
 | **Complexity**        | Easy                                       | Medium                                       | Easy-Medium                       |
 | **Example usage**     | `await fetch_data()`                       | `asyncio.gather()`                           | `threading.Thread()`              |
 """
+
+# Difference between sleep and await
+"""
+sleep blocks the entire thread, while await pauses only the 
+current coroutine and allows other async tasks to run.
+"""
+
+#What exactly is an Event Loop?
+"""
+An event loop is a mechanism that continuously checks for tasks, 
+executes them, and switches between tasks when one is waiting, without blocking the thread.
+In simple words:
+It manages and runs async tasks efficiently on a single thread.
+"""
