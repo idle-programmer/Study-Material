@@ -109,3 +109,9 @@ def correctStr(str1):
     return True if p==0 else False
 str1='(hello(world)(one)two)'
 print(correctStr(str1))
+
+# Common between 2 list
+l1=[1,2,3,4]
+l2=[3,4,5,6]
+s3 = set(l1) - (set(l1)-set(l2))
+print(s3)

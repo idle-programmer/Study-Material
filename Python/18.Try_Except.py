@@ -46,3 +46,15 @@ finally runs always (cleanup code).
 try → success → else → finally
 try → exception → except → finally  
 """
+
+# Debugging in python
+"""
+Using print() statements
+Using Python Debugger (pdb)
+Using IDE Debugger
+Using Logging (logging module)
+Exception Handling (try-except)
+Using Tracebacks (eg: ZeroDivisionError)
+Using Assertions (assert)
+Debugging in Django (DEBUG = True (only in development))
+"""

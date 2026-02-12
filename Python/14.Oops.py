@@ -128,7 +128,7 @@ Examples:
 2. __str__: Defines string representation of an object.
 3. __add__: Defines behavior for the + operator.
 4. __len__: Defines behavior for the len() function.
-5__iter__: Returns an iterator object for iteration."""
+5.__iter__: Returns an iterator object for iteration."""
 
 # What is MRO?
 """Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes."""
@@ -176,4 +176,12 @@ print(obj.say_hello()) # output = Greetings! The class has been monkey patched!
 | 1. Timing           | Applied at runtime        | Applied at definition time                  |
 | 2. Mechanism        | Class.method = new_method | function/class as an argument, @ syntax     |
 | 3. Scope            | global change             | impacts only the specific function or class |
+"""
+
+# What is a metaclass in Python?
+"""
+A metaclass is the "class of a class" that customizes how other classes are created. Every class in Python 
+is an instance of a metaclass—by default, it's the built-in type. You create one by subclassing type and 
+overriding methods like __new__(cls, name, bases, attrs), which receives the class name, base classes, and 
+attributes dictionary. This allows injecting behavior, like auto-registering classes or validating attributes.
 """

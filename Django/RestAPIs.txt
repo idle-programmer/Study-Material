@@ -14,3 +14,13 @@ Stateful-API: server maintain/retain info of client session/past interaction.
 *Put vs patch?
 ->PUT: Replaces entire resource
 PATCH: Updates partial resource
+
+If we can get data using POST, why do we use GET?
+Even though POST can return data, GET is used because it is safe, cacheable, idempotent, 
+and semantically correct for read-only operations, Get can be Bookmarked, Shared and Indexed by search engines.
+
+If PUT can update data, why do we need PATCH?
+PUT replaces the entire resource, while PATCH updates only specific fields, making 
+PATCH safer and more efficient for partial updates.
+
+

@@ -1,3 +1,10 @@
+"""
+In Python, async and await let us write non-blocking code for I/O-heavy operations
+like network calls, DB queries, or file operations, within a single thread of execution
+They allow a program to efficiently manage multiple I/O-bound tasks by cooperatively switching
+between tasks when one is waiting for an operation to complete, instead of blocking the entire program.
+"""
+
 import asyncio
 
 async def fetch(user_id):
@@ -21,14 +28,6 @@ async def mainConcurrent():
     print(f"All: {results}")
 
 asyncio.run(mainConcurrent())
-
-"""
-In Python, async and await let us write non-blocking code for I/O-heavy operations
-like network calls, DB queries, or file operations, within a single thread of execution
-They allow a program to efficiently manage multiple I/O-bound tasks by cooperatively switching
-between tasks when one is waiting for an operation to complete, instead of blocking the entire program.
-"""
-
 
 
 # Difference between Async/Await, AsyncIO, and Threading

@@ -1,6 +1,6 @@
 """
 In Python, multiprocessing lets me run CPU-heavy work in parallel by creating separate processes, 
-each with its own Python interpreter. This avoids the GIL, so it’s perfect for heavy math, 
+each with its own Python interpreter. This avoids the GIL, so it's perfect for heavy math, 
 image/video processing, ML, or batch jobs.
 """
 import multiprocessing as mp

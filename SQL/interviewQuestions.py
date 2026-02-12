@@ -19,7 +19,23 @@ SELECT
 FROM Customer
 GROUP BY email
 HAVING COUNT(*) > 1;
-
-
-
 """ 
+
+# Find nth highest salary  
+"""
+SELECT DISTINCT Salary
+FROM Employee
+ORDER BY Salary DESC
+LIMIT 1 OFFSET (n-1);
+"""
+
+# Find nth highest salary without order by
+"""
+SELECT e1.salary
+FROM Employee e1
+WHERE 3 = (
+    SELECT COUNT(DISTINCT e2.salary)
+    FROM Employee e2
+    WHERE e2.salary >= e1.salary
+);
+"""
