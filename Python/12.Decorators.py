@@ -55,3 +55,21 @@ login()
 # Can a function has multiple decorators, if yes then how they are executed by order?
 """ Yes, A function can have multiple decorators. They are applied from 
 the innermost (closest to the function) to the outermost."""
+
+# What are the advantages of using decorators in Python, and what happens if we don't use them?
+"""
+Decorators in Python allow us to add extra behavior like logging, caching, authentication, or 
+validation to a function without modifying its original code.
+Advantages:
+Reusability – write logic once, apply everywhere
+Separation of concerns – keeps business logic clean
+Cleaner and more readable syntax using @decorator
+Easy to maintain and scale
+
+If we don’t use decorators, we’d have to repeat the same boilerplate code inside multiple 
+functions, which makes the code messy and harder to maintain.
+
+Example:
+@lru_cache for caching or @app.route in Flask.
+Also, we use functools.wraps to preserve the original function’s metadata.
+"""

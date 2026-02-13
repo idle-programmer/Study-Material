@@ -65,3 +65,13 @@ executes them, and switches between tasks when one is waiting, without blocking 
 In simple words:
 It manages and runs async tasks efficiently on a single thread.
 """
+
+# Give a scenario where concurrency (async/await) is preferred over parallelism (multithreading).
+"""
+Prefer async/await concurrency for I/O-bound tasks like web requests or database queries, where threads 
+waste resources idling. Example: A chat server handling 10,000 concurrent users—each await yields control 
+without thread overhead or GIL issues, using one thread efficiently.
+
+Multithreading suits CPU-bound tasks (e.g., image processing) but struggles with I/O due to context-switching costs. 
+In benchmarks, async fetches 100 URLs in 2s vs. threads' 10s+. Use asyncio.gather() for fan-out.
+"""

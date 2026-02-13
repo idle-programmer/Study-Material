@@ -3,6 +3,12 @@
 ->Index is a specialized data structure created on db columns to speed up data retrieval, 
 and indexing is the technique of using these structures to improve query performance on db tables.
 
+* What is Compound Index?
+->A compound index (or composite index) is a database index that references multiple fields within a 
+collection or table, allowing for faster query filtering and sorting across those fields.
+syntax:
+CREATE INDEX idx_orders_customer_date ON orders (customer_id, order_date);
+
 
 *⁠What is transaction in SQL?
 ->A SQL transaction groups one or more db operations (like INSERT, UPDATE, DELETE)
