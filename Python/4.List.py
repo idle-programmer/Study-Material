@@ -31,15 +31,13 @@ mylist5 = copy.deepcopy(mylist4)  # deep copy
 
 # Interview Question
 # Diffn b/w remove() & del
-"""
-remove() deletes an item by value (removes the first occurrence).
-del deletes an item by index or can delete slices or entire variables/lists.
-"""
+"""remove() deletes an item by value (removes the first occurrence).
+del deletes an item by index or can delete slices or entire variables/lists."""
+
 # Diffn b/w append() & extend()
-"""
-append() adds its argument as a single element at the end of the list.
-extend() adds each element of its argument (an iterable) individually to the end of the list.
-"""
+"""append() adds its argument as a single element at the end of the list.
+extend() adds each element of its argument (an iterable) individually to the end of the list."""
+
 # Diffn b/w deep copy vs shallow copy
 """shallow copy shares nested objects, deep copy duplicates everything recursively"""
 
@@ -69,8 +67,7 @@ squares = [x**2 for x in lst]  # list comprehension
 lst[1:4] # slicing
 
 # How is data stored in a list?
-"""
-List: Ordered & Indexed storage
+"""List: Ordered & Indexed storage
 
 How it's stored internally:
 A list stores elements in a contiguous memory array. Each element is stored with an index.
@@ -80,5 +77,4 @@ Key characteristics:
 ✅ Ordered
 ✅ Allows duplicates
 ✅ Index-based access
-❌ Slower lookup (O(n))
-"""
+❌ Slower lookup (O(n))"""

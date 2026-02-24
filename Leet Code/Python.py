@@ -115,3 +115,33 @@ l1=[1,2,3,4]
 l2=[3,4,5,6]
 s3 = set(l1) - (set(l1)-set(l2))
 print(s3)
+
+# find Kth Largest element
+import heapq
+lst = [3,2,3,1,2,4,5,5,6]
+k = 4
+print(heapq.nlargest(k, lst)[-1])
+
+
+
+# longest substr of unique elements op: mehulkanojiy
+str1="mehulkanojiya"
+def get_longest_substr(str1):
+    seen=set()
+    left=0
+    max_l=0
+    start_i=0
+    for right in range(len(str1)):
+        # for removing duplicate
+        while str1[right] in seen:
+            seen.remove(str1[left])
+            left+=1
+        # adding checked item 
+        seen.add(str1[right])
+        
+        # calculating index points
+        if right - left +1 >max_l:
+            max_l = right - left + 1
+            start_i = left
+            
+    return str1[start_i:start_i+max_l]

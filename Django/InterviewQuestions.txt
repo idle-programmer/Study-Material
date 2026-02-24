@@ -26,10 +26,10 @@ Server thinks the request is genuine.
 ->
 reducing payload size: by pagination
 optimizing database queries: avoid N+1 query
-caching: by redis
 indexing: on foreign keys, filter/search fields
-Async APIs
+caching: by redis
 background tasks
+Async APIs
 Scaling infra: by multiple instance, loadbalancer
 
 How to check if API response time is improved?
@@ -74,7 +74,7 @@ Broker (Redis, Kafka, etc.) receives it
 All subscribers listening to that topic get the message.
 
 Difference between authentication and authorization?
-->Authentication vs Authorization – What's the difference?Authentication verifies 
-a user's identity (who you are) using credentials like passwords or biometrics, 
+->Authentication vs Authorization – What's the difference?
+Authentication verifies a user's identity (who you are) using credentials like passwords or biometrics, 
 while Authorization determines their permissions (what you can do) after login.
 

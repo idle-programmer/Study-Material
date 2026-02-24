@@ -136,3 +136,7 @@ How do you achieve authentication in Django?
 which handles users, groups, permissions, and cookie-based sessions by default. For APIs, token-based methods are commonly used, 
 often with packages like Django REST Framework (DRF).
 
+
+*diff betn celery and celery beat?
+-> Celery is used to execute asynchronous background tasks, while Celery Beat is a scheduler 
+that triggers periodic tasks and sends them to Celery workers for execution.

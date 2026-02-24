@@ -1,7 +1,10 @@
 
 *⁠What is Index/indexing?
-->Index is a specialized data structure created on db columns to speed up data retrieval, 
+->Index is a specialized data structure (usually B-Tree) created on db columns to speed up data retrieval 
+by allowing the database to locate rows faster instead of scanning the entire table,
 and indexing is the technique of using these structures to improve query performance on db tables.
+Advantages: Faster SELECT queries, Faster WHERE filtering, Faster JOIN/ORDER BY
+Disadvantages: Slower INSERT / UPDATE / DELETE , Takes extra disk space
 
 * What is Compound Index?
 ->A compound index (or composite index) is a database index that references multiple fields within a 
@@ -72,3 +75,32 @@ while MySQL is a disk-based relational SQL database designed for structured data
 | -------- | ----------------- | ------------------- |
 | `WHERE`  | Before `GROUP BY` | Row-level filtering |
 | `HAVING` | After `GROUP BY`  | Aggregate filtering |
+
+
+*How do you optimise DB Query in Postgres or mysql?
+->
+identify the problem by explain-analyze
+use index properly, too many index slows insert/update
+avoid select *
+optimize where condition
+use proper JOINs and avoid unnecessary ones.
+use LIMIT when possible
+use proper datatypes 
+use query caching (app level) - redis 
+Use proper pagination
+
+* What is Transaction, Commit and Rollback in sql?
+-> 
+A transaction is a group of one or more SQL operations executed as a single unit of 
+work to ensure data consistency and integrity.
+
+COMMIT: Permanently save the changes made during a transaction.
+ROLLBACK: Undo all changes if an error occurs, made during the current transaction.
+
+* ⁠ACID
+-> 
+A – Atomicity → All or nothing
+C – Consistency → DB remains valid
+I – Isolation → Transactions don’t interfere
+D – Durability → Committed data is permanent
+

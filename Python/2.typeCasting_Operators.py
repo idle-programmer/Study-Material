@@ -12,8 +12,7 @@ complex()
 # implicit vs explicit type conversion with examples
 """
 explicit : done by us, eg: int("3")
-implicit : done by python, eg: *args is tupple, **args is dict.
-"""
+implicit : done by python, eg: *args is tupple, **args is dict."""
 
 # many values that evaluate to False
 bool(False)  # return False
@@ -32,13 +31,12 @@ bool({})  # return False
 # What is membership Operators?
 """
 in 
-not in
-"""
+not in"""
+
 # Difference b/w is & ==?
 """
 is checks if two variables point to the same object in memory (identity comparison).
-== checks if the values of two objects are equal (equality comparison).
-"""
+== checks if the values of two objects are equal (equality comparison)."""
 
 # Write a python program to add two numbers without using + operator
 def add(a,b):

@@ -117,7 +117,8 @@ Each instance has its own attributes and can call the methods defined in the cla
 """
 # ⁠What is self in python?
 """
-self refers to the instance of the class itself. It is used to access variables and methods associated with that specific instance.
+self refers to the instance of the class itself. It is used to access variables and 
+methods associated with that specific instance.
 """
 
 # What are dunder/magic methods?
@@ -184,4 +185,36 @@ A metaclass is the "class of a class" that customizes how other classes are crea
 is an instance of a metaclass—by default, it's the built-in type. You create one by subclassing type and 
 overriding methods like __new__(cls, name, bases, attrs), which receives the class name, base classes, and 
 attributes dictionary. This allows injecting behavior, like auto-registering classes or validating attributes.
+"""
+
+# does python support Polimorphism?
+"""
+Yes, Python supports polymorphism through method overriding, duck typing, and operator overloading. 
+It allows different objects to respond to the same method name in their own way.
+"""
+
+# SOLID
+"""
+SOLID is a set of 5 principles that help write clean, maintainable, scalable code.
+
+S - Single Responsibility Principle (SRP)
+A class should have only one reason to change. One class = One responsibility
+Don't mix business logic + email sending + DB logic in same class
+
+O - Open/Closed Principle (OCP)
+Software should be open for extension, closed for modification.
+Add new functionality without changing existing code. Use inheritance / polymorphism
+
+L - Liskov Substitution Principle (LSP)
+Child class should be able to replace parent class without breaking behavior.
+Subclass must behave like parent. Don't change expected behavior in child
+
+I - Interface Segregation Principle (ISP)
+Don't force classes to implement methods they don't use.
+Small, specific interfaces. Avoid large "god" interfaces
+
+D - Dependency Inversion Principle (DIP)
+Depend on abstractions, not concrete implementations.
+Use interfaces / abstract classes. Helps in testing and loose coupling
+
 """

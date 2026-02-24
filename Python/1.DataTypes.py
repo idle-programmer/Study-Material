@@ -67,8 +67,8 @@ A list can store elements of mixed types, is built-in, and can grow or shrink dy
 An array, on the other hand, stores only elements of the same data type, is more memory-efficient, 
 requires importing the array module, and is optimized for numerical operations.
 Lists are best for general-purpose data storage with high flexibility,
-while arrays are preferred for handling large amounts of numeric data where performance and memory efficiency are important.
-"""
+while arrays are preferred for handling large amounts of numeric data where performance and memory efficiency are important."""
+
 #2. What are built-in data types in Python?
 """ Built-in data types in Python include:
 1. Numeric Types: int, float, complex
@@ -111,8 +111,7 @@ Python checks .py timestamp—if changed, recompiles to new .pyc."""
 # what is pythonpath?
 """PYTHONPATH is an environment variable that adds directories to sys.path. 
 Python searches these paths for modules during import. Useful for custom project 
-structures or local development.
-"""
+structures or local development. """
 import sys
 print(sys.path)  # Shows all search paths (PYTHONPATH included)
 
@@ -125,5 +124,4 @@ print(sys.path)  # Shows all search paths (PYTHONPATH included)
 | Identity      | Memory address stays same (in-place modification) | New object created (different memory address) |
 | Thread Safety | Not thread-safe (race conditions possible)        | Inherently thread-safe                        |
 | Hashing       | Not hashable (can't be dict keys/sets)            | Hashable (perfect for dict keys/sets)         |
-| Performance   | Fast in-place changes                             | Slower changes, faster reads/caching          |
-"""
+| Performance   | Fast in-place changes                             | Slower changes, faster reads/caching          |"""
