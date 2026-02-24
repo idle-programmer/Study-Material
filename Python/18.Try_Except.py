@@ -1,9 +1,7 @@
 "An exception is an error that occurs during program execution and breaks the normal flow."
-"""
-Code inside try runs If error occurs → jumps to except If no error → skips except.
+"""Code inside try runs If error occurs → jumps to except If no error → skips except.
 else runs Only if no exception occurs.
-finally always executes, whether exception occurs or not.
-"""
+finally always executes, whether exception occurs or not."""
 try:
     x = int("10")
 except ValueError:
@@ -44,17 +42,14 @@ To enforce business rules"""
 finally runs always (cleanup code).
 
 try → success → else → finally
-try → exception → except → finally  
-"""
+try → exception → except → finally  """
 
 # Debugging in python
-"""
-Using print() statements
+"""Using print() statements
 Using Python Debugger (pdb)
 Using IDE Debugger
 Using Logging (logging module)
 Exception Handling (try-except)
 Using Tracebacks (eg: ZeroDivisionError)
 Using Assertions (assert)
-Debugging in Django (DEBUG = True (only in development))
-"""
+Debugging in Django (DEBUG = True (only in development))"""

@@ -48,38 +48,32 @@ Instead:
 This makes Python faster.
 Python uses memory pooling to reduce frequent system calls."""
 
-"""
-Immutable vs Mutable (Memory Behavior)
+"""Immutable vs Mutable (Memory Behavior)
 a = 10
 a = a + 1 # New int object created, old one unchanged (immutable)
 
 lst = [1,2]
-lst.append(3) # Same list object modified (mutable)
-"""
+lst.append(3) # Same list object modified (mutable)"""
 
 def demo():
     x = [1,2,3]
     return x
 
 y = demo()
-"""
-| Step          | Memory                  |
+"""| Step          | Memory                  |
 | ------------- | ----------------------- |
 | x created     | Stack reference         |
 | list          | Heap                    |
 | return        | x reference transferred |
 | function ends | stack cleaned           |
-| y exists      | heap object alive       |
-"""
+| y exists      | heap object alive       |"""
 
 # Multiprocessing and Multithreading
-"""""""""
-In Python:
+"""""""""In Python:
 - Multiprocessing uses separate processes, each with its own memory space (CPU-bound tasks) eg: img process, computation, ML.
 - Multithreading shares memory within a single process (I/O-bound tasks) eg: file reading, api calls.
 Memory management in multiprocessing is more complex due to separate memory spaces.
-Memory management in multithreading is simpler but can have race conditions.
-"""
+Memory management in multithreading is simpler but can have race conditions."""
 
 # What is GIL
 """GIL (Global Interpreter Lock) is a mutex that protects access to Python objects, 
@@ -89,8 +83,7 @@ which can be a bottleneck for CPU-bound tasks.
 However, it simplifies memory management and ensures thread safety for memory operations."""
 
 # How do you release memory in Python?
-"""
-* Remove References
+"""* Remove References
 my_large_object = [...]
 del my_large_object
 
@@ -100,6 +93,5 @@ my_large_object = None
 * Manually Trigger Garbage Collection
 import gc
 del my_large_object
-gc.collect()
-"""
+gc.collect()"""
 

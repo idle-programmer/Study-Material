@@ -2,12 +2,10 @@
 # Object: Instance of a class, anything in python can be considered as object of a class
 
 # Inheritance: Allows a class to inherit properties and behaviors from an existing class (superclass) to new class (subclass)
-"""
-a. Single Inheritance - Simple ,Animal → Dog
+"""a. Single Inheritance - Simple ,Animal → Dog
 b. Multiple Inheritance - Multiple are passed ,Mom + Dad → Child
 c. Multilevel Inheritance - Y inherits X and then Z inherits Y ,Grandpa → Father → Son
-d. Hierarchical Inheritance - Inherits from same super class , Vehicle → Car + Bike
-"""
+d. Hierarchical Inheritance - Inherits from same super class , Vehicle → Car + Bike"""
 """examples:"""
 class LivingBeing:
     def __init__(self,name):
@@ -80,18 +78,14 @@ print(animal_sound(cat))
 
 # Interview Questions
 # Goal/Benefits of using oops
-"""
-OOP helps us write code that is reusable, maintainable, 
-scalable and closer to real world scenarios.
-"""
+"""OOP helps us write code that is reusable, maintainable, 
+scalable and closer to real world scenarios."""
 
 #What is method? Different types of methods in python?
-"""
-Methods are functions defined inside a class. They can be:
+"""Methods are functions defined inside a class. They can be:
 1. Instance methods - operate on instance data
 2. Class methods - operate on class data (use @classmethod decorator)
-3. Static methods - operate independently of class or instance (use @staticmethod decorator)
-"""
+3. Static methods - operate independently of class or instance (use @staticmethod decorator)"""
 class Student:
     school = "ABC School"
     def __init__(self, name):
@@ -110,16 +104,13 @@ class Student:
 
 
 # What is instance?
-"""
-An instance is an object from a class that represents a real-world entity in memory.
+"""An instance is an object from a class that represents a real-world entity in memory.
 An instance is an individual object created from a class.
-Each instance has its own attributes and can call the methods defined in the class.
-"""
+Each instance has its own attributes and can call the methods defined in the class."""
+
 # ⁠What is self in python?
-"""
-self refers to the instance of the class itself. It is used to access variables and 
-methods associated with that specific instance.
-"""
+"""self refers to the instance of the class itself. It is used to access variables and 
+methods associated with that specific instance."""
 
 # What are dunder/magic methods?
 """Methods in Python that start and end with double underscores (e.g., __init__, __str__). 
@@ -151,8 +142,7 @@ class D(C, B):
 D().show() # (D, C, B, A, object)
 
 # What is monkey patching?
-"""
-Monkey patching is a programming technique used to dynamically
+"""Monkey patching is a programming technique used to dynamically
 modify or extend the behaviour of class, module, or function at 
 runtime without altering its original code.
 
@@ -176,26 +166,20 @@ print(obj.say_hello()) # output = Greetings! The class has been monkey patched!
 | ------------------- | ------------------------- | ------------------------------------------- |
 | 1. Timing           | Applied at runtime        | Applied at definition time                  |
 | 2. Mechanism        | Class.method = new_method | function/class as an argument, @ syntax     |
-| 3. Scope            | global change             | impacts only the specific function or class |
-"""
+| 3. Scope            | global change             | impacts only the specific function or class |"""
 
 # What is a metaclass in Python?
-"""
-A metaclass is the "class of a class" that customizes how other classes are created. Every class in Python 
+"""A metaclass is the "class of a class" that customizes how other classes are created. Every class in Python 
 is an instance of a metaclass—by default, it's the built-in type. You create one by subclassing type and 
 overriding methods like __new__(cls, name, bases, attrs), which receives the class name, base classes, and 
-attributes dictionary. This allows injecting behavior, like auto-registering classes or validating attributes.
-"""
+attributes dictionary. This allows injecting behavior, like auto-registering classes or validating attributes."""
 
 # does python support Polimorphism?
-"""
-Yes, Python supports polymorphism through method overriding, duck typing, and operator overloading. 
-It allows different objects to respond to the same method name in their own way.
-"""
+"""Yes, Python supports polymorphism through method overriding, duck typing, and operator overloading. 
+It allows different objects to respond to the same method name in their own way."""
 
 # SOLID
-"""
-SOLID is a set of 5 principles that help write clean, maintainable, scalable code.
+"""SOLID is a set of 5 principles that help write clean, maintainable, scalable code.
 
 S - Single Responsibility Principle (SRP)
 A class should have only one reason to change. One class = One responsibility
@@ -215,6 +199,4 @@ Small, specific interfaces. Avoid large "god" interfaces
 
 D - Dependency Inversion Principle (DIP)
 Depend on abstractions, not concrete implementations.
-Use interfaces / abstract classes. Helps in testing and loose coupling
-
-"""
+Use interfaces / abstract classes. Helps in testing and loose coupling"""

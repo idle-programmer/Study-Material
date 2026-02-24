@@ -1,7 +1,5 @@
-"""
-Decorators let you add extra behavior to a function, without changing the function's code.
-A decorator is a function that takes another function as input and returns a new function.
-"""
+"""Decorators let you add extra behavior to a function, without changing the function's code.
+A decorator is a function that takes another function as input and returns a new function."""
 
 
 def my_decorator(func):
@@ -71,5 +69,4 @@ functions, which makes the code messy and harder to maintain.
 
 Example:
 @lru_cache for caching or @app.route in Flask.
-Also, we use functools.wraps to preserve the original function’s metadata.
-"""
+Also, we use functools.wraps to preserve the original function’s metadata."""

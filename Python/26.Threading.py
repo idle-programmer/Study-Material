@@ -1,8 +1,6 @@
-"""
-In Python, threading is used to run multiple functions concurrently,
+"""In Python, threading is used to run multiple functions concurrently,
 especially for I/O-bound work like downloading files or making API calls.
-A thread is the smallest unit of execution inside a process.
-"""
+A thread is the smallest unit of execution inside a process."""
 
 import threading
 import time

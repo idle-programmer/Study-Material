@@ -1,8 +1,7 @@
 # Interview Questions
 
 # What is python namespace?
-"""
-A namespace in Python is a container (like a dictionary) that maps names (variables, functions, classes)
+"""A namespace in Python is a container (like a dictionary) that maps names (variables, functions, classes)
 to objects. It ensures names are unique within their scope and prevents naming conflicts.
 
 Types of Namespaces:
@@ -12,8 +11,7 @@ Global - Module-level names (created when module loads)
 
 Local - Function/method-level names (created when function called)
 
-Enclosing - Nested functions (outer function's namespace)
-"""
+Enclosing - Nested functions (outer function's namespace)"""
 x = "global"  # Global namespace
 
 def outer():
