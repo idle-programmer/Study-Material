@@ -136,7 +136,26 @@ How do you achieve authentication in Django?
 which handles users, groups, permissions, and cookie-based sessions by default. For APIs, token-based methods are commonly used, 
 often with packages like Django REST Framework (DRF).
 
-
 *diff betn celery and celery beat?
 -> Celery is used to execute asynchronous background tasks, while Celery Beat is a scheduler 
 that triggers periodic tasks and sends them to Celery workers for execution.
+
+*how do you do api versioning in Django/ Fastapi project?
+-> In Django DRF, I use URLPathVersioning and structure endpoints like /api/v1/ and /api/v2/. In FastAPI, 
+I create separate APIRouter instances with version prefixes. This ensures backward compatibility and allows 
+safe introduction of breaking changes.
+
+*what is routers urls and reversals in django?
+-> URLs in Django map request paths to views.
+Routers in DRF automatically generate RESTful URL patterns for ViewSets.
+URL reversal (reverse / reverse_lazy) dynamically generates URLs using their name instead of hardcoding them.
+
+* how to enhance security in django?
+-> To enhance Django security, 
+I disable DEBUG, enforce HTTPS, 
+configure secure cookies, enable CSRF protection, 
+use Django ORM to prevent SQL injection, 
+implement JWT authentication with rate limiting, 
+protect secrets using environment variables, 
+and secure deployment using Nginx, SSL, 
+and restricted database access.
