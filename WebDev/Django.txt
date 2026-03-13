@@ -152,10 +152,10 @@ URL reversal (reverse / reverse_lazy) dynamically generates URLs using their nam
 
 * how to enhance security in django?
 -> To enhance Django security, 
-I disable DEBUG, enforce HTTPS, 
-configure secure cookies, enable CSRF protection, 
-use Django ORM to prevent SQL injection, 
-implement JWT authentication with rate limiting, 
-protect secrets using environment variables, 
-and secure deployment using Nginx, SSL, 
-and restricted database access.
+Disable DEBUG, enforce HTTPS, 
+Configure secure cookies, Enable CSRF protection, 
+Use Django ORM to prevent SQL injection, 
+Implement JWT authentication with rate limiting, 
+Protect secrets using environment variables, 
+Secure deployment using Nginx, SSL, 
+Restricted database access.

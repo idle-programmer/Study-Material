@@ -16,3 +16,8 @@ using django-celery-beat for better production safety and multi-worker support."
 """In Django, pagination can be implemented using Django Paginator or DRF built-in pagination classes 
 like PageNumberPagination, LimitOffsetPagination, or CursorPagination. In FastAPI, we manually implement 
 limit-offset logic or use fastapi-pagination for production-ready APIs."""
+
+# "How do you avoid N+1 queries in FastAPI?"
+"""In FastAPI, when using SQLAlchemy ORM, the N+1 query problem can be avoided by eager loading 
+relationships using options like joinedload(), selectinload(), or subqueryload(). These allow related 
+data to be fetched efficiently in fewer queries, similar to Django's select_related and prefetch_related."""

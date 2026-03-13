@@ -1,5 +1,5 @@
 # Why you use elastic ip in ec2
-"""to prevent your instance’s public IP from changing when it is stopped/started, allowing for consistent 
+"""to prevent your instance's public IP from changing when it is stopped/started, allowing for consistent 
 DNS records, firewall whitelisting, and rapid failover by remapping the IP to a new instance. """
 
 # What is static ip in ec2
@@ -80,7 +80,7 @@ cat /var/log/nginx/access.log"""
 
 # Types of EC2 instance
 """General Purpose Instances:
-t3 / t3a (burstable – most common in startups) (t3.medium)
+t3 / t3a (burstable - most common in startups) (t3.medium)
 t4g (ARM-based, cheaper)
 m5 / m6i
 Compute Optimized Instances: c5 (c5.large) / c6i/ c7g

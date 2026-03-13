@@ -99,16 +99,25 @@ def reverseList(lst):
 print(reverseList([1,2,3,4,5]))
 
 # Check Correct String
-def correctStr(str1):
-    p=0
-    for i in str1:
-        if i =='(':
-            p+=1
-        elif i==')':
-            p-=1
-    return True if p==0 else False
+def isValid(s: str) -> bool:
+        stack = []
+        mapping = {
+            ')': '(',
+            ']': '[',
+            '}': '{'
+        }
+
+        for char in s:
+            if char in mapping:  # closing bracket
+                if not stack or stack[-1] != mapping[char]:
+                    return False
+                stack.pop()
+            else:  # opening bracket
+                stack.append(char)
+
+        return len(stack) == 0
 str1='(hello(world)(one)two)'
-print(correctStr(str1))
+print(isValid(str1))
 
 # Common between 2 list
 l1=[1,2,3,4]
@@ -145,3 +154,25 @@ def get_longest_substr(str1):
             start_i = left
             
     return str1[start_i:start_i+max_l]
+
+
+# write a code to find difference between the two dict object (without looping)
+# from deepdiff import DeepDiff
+
+# obj1 = {
+#     "name": "Alice",
+#     "age": 30,
+#     "address": {"city": "NY", "zip": 10001},
+#     "tags": ["a", "b"]
+# }
+
+# obj2 = {
+#     "name": "Alice",
+#     "age": 31,
+#     "address": {"city": "Boston"},
+#     "tags": ["a", "c", "d"],
+#     "active": True
+# }
+
+# diff = DeepDiff(obj1, obj2)
+# print(diff)

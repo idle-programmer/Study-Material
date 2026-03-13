@@ -51,3 +51,15 @@ WHERE e.salary = (
     WHERE e2.dept_id = e.dept_id
 );
 """
+
+# CREATE TABLE products ( product_id INT PRIMARY KEY,
+# product_name VARCHAR(100), category VARCHAR(50), 
+# price DECIMAL(10,2), stock_quantity INT ); 
+# SQL: Write a query to list all categories 
+# which have more than 5 unique products.
+"""
+SELECT category, COUNT(product_id) AS product_count
+FROM products
+GROUP BY category
+HAVING COUNT(product_id) > 5;
+"""
