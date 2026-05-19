@@ -24,9 +24,4 @@ t2.join()
 print("Main thread done!")
 
 
-
-
-
-
-
 # How do u handle concurrency issue in python

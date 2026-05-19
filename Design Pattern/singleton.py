@@ -19,5 +19,20 @@ class ControlTower:
 
 tower1 = ControlTower()
 tower2 = ControlTower()
-
 print(tower1 is tower2)
+
+
+class DatabasePool:
+    __instance = None
+
+    def __new__(cls):
+        if cls.__instance is None:
+            cls.__instance = super().__new__(cls)
+            cls.__instance.pool = []  # simulate a connection pool
+            cls.__instance.max_size = 5
+            print("DB Pool created")
+        return cls.__instance
+    
+db1 = DatabasePool()
+db2 = DatabasePool()
+print(db1 is db2)

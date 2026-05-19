@@ -46,7 +46,7 @@ def login():
     return None
 
 
-login()
+# login()
 
 # Interview Questions
 
@@ -59,14 +59,35 @@ the innermost (closest to the function) to the outermost."""
 Decorators in Python allow us to add extra behavior like logging, caching, authentication, or 
 validation to a function without modifying its original code.
 Advantages:
-Reusability – write logic once, apply everywhere
-Separation of concerns – keeps business logic clean
+Reusability - write logic once, apply everywhere
+Separation of concerns - keeps business logic clean
 Cleaner and more readable syntax using @decorator
 Easy to maintain and scale
 
-If we don’t use decorators, we’d have to repeat the same boilerplate code inside multiple 
+If we don't use decorators, we'd have to repeat the same boilerplate code inside multiple 
 functions, which makes the code messy and harder to maintain.
 
 Example:
 @lru_cache for caching or @app.route in Flask.
-Also, we use functools.wraps to preserve the original function’s metadata."""
+Also, we use functools.wraps to preserve the original function's metadata."""
+
+# Most Asked Decorator
+from datetime import datetime
+def my_deco(func):
+    def wrapper(*args, **kwargs):
+        start = datetime.now()
+        try:
+            result = func(*args, **kwargs)
+            print(result)
+        except Exception as e:
+            print(f"Exception occurred: {e}")
+        finally:
+            print(f"time taken: {datetime.now()-start}")
+        return result
+    return wrapper
+
+@my_deco
+def area(l,h):
+    return l*h
+
+area(29999,49999)

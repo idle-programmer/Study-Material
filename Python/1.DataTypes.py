@@ -48,15 +48,15 @@ m = None
 
 #Interview Questions
 #1. Differentiate between list, tuple, set, dictionary and Array?
-""" A list is an ordered, mutable , contain duplicate & mixed datatypes. Indexed by integers.
+""" A list is an ordered, mutable, contain duplicate & mixed datatypes. Indexed by integers.
 
-Tuple =  immutable, meaning you cannot change its values once defined. 
+Tuple = immutable, meaning you cannot change its values once defined. 
 Indexed & contain mixed types & duplicates, declared with parentheses (1, 2, 3).
 
 Sets = unordered, mutable collections with unique elements only. No indexing 
 & declared with curly braces {1, 2, 3}. They are useful for removing duplicates or performing set operations.
 
-Dictionary =  mutable and unordered collection. Stores data as key-value pairs, where keys are unique 
+Dictionary = mutable and unordered collection. Stores data as key-value pairs, where keys are unique 
 and values can be of any type. Declared with curly braces using the key:value syntax, such as {1: "a", 2: "b"}.
 
 Arrays = ordered, mutable, and typically hold elements of a single data type. Require importing the array module
@@ -85,8 +85,9 @@ These data types allow you to store and manipulate different kinds of data in Py
 Examples of mutable data types include lists, dictionaries, and sets."""
 
 #4.What is range and xrange in Python?
-""" In Python 2, range() returns a list of numbers, while xrange() returns an xrange object that generates numbers on demand (more memory efficient). 
-In Python 3, xrange() is removed, and range() behaves like xrange() from Python 2, returning a range object that generates numbers on demand. """
+""" In Python 2, range() returns a list of numbers, while xrange() returns an xrange object that 
+generates numbers on demand (more memory efficient). In Python 3, xrange() is removed, and range() 
+behaves like xrange() from Python 2, returning a range object that generates numbers on demand. """
 
 #Is python compiled lang or interpreted lang? Why?
 """Python is interpreted because there's no separate compilation step—you run source code directly.

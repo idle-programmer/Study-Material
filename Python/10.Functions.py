@@ -8,13 +8,15 @@ my_function("Emil")  # "Emil" is an argument
 my_function(fname, lname) , this is Positional Arguement
 my_function(name = "friend"), this is Keyword Arguement"""
 
-"""You can specify that a function can have ONLY positional arguments. To specify positional-only arguments, add , / after the arguments:
+"""You can specify that a function can have ONLY positional arguments. To specify positional-only 
+arguments, add , / after the arguments: 
 def my_function(name, /)"""
 
 """To specify that a function can have only keyword arguments, add *, before the arguments:
 def my_function(*, name)"""
 
-"""You can combine both argument types in the same function. Arguments before / are positional-only, and arguments after * are keyword-only:
+"""You can combine both argument types in the same function. Arguments before / are positional-only, 
+and arguments after * are keyword-only:
 def my_function(a, b, /, *, c, d)
 my_function(5, 10, c = 15, d = 20)"""
 
