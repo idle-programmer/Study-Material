@@ -3,8 +3,8 @@ meaning you can traverse through all its values. Technically, in Python, an iter
 that implements the iterator protocol, which consists of the methods __iter__() and __next__()."""
 
 # Iterator vs Iterable
-"""Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers which you can get an iterator from.
-All these objects have a iter() method which is used to get an iterator:"""
+"""Lists, tuples, dictionaries, and sets are all iterable objects. They are iterable containers 
+which you can get an iterator from. All these objects have a iter() method which is used to get an iterator:"""
 tup = (1, 2, 3, 4, 5)  # tupple
 itr1 = iter(tup)  # returns iterator object
 print(next(itr1))

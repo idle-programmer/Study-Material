@@ -2,25 +2,82 @@
 # Object: Instance of a class, anything in python can be considered as object of a class
 
 # Inheritance: Allows a class to inherit properties and behaviors from an existing class (superclass) to new class (subclass)
-"""a. Single Inheritance - Simple ,Animal → Dog
-b. Multiple Inheritance - Multiple are passed ,Mom + Dad → Child
-c. Multilevel Inheritance - Y inherits X and then Z inherits Y ,Grandpa → Father → Son
-d. Hierarchical Inheritance - Inherits from same super class , Vehicle → Car + Bike"""
-"""examples:"""
-class LivingBeing:
-    def __init__(self,name):
-        self.name=name
+# Single Inheritance - Simple ,Animal → Dog
+class Animal:
+    def __init__(self, name):
+        self.name = name
+        print("Animal constructor called")
 
-class Human(LivingBeing):
-    def speak(self):
-        return f"{self.name} says Hello"
+class Dog(Animal):
+    def __init__(self, name, breed):
+        # Calling parent class constructor using super()
+        super().__init__(name)
 
-class Animal(LivingBeing):
-    def speak(self):
-        return f"{self.name} does not speak"
-    
-dog = Animal("Dog")
-print(dog.speak())  # Output: Dog does not speak
+        self.breed = breed
+        print("Dog constructor called")
+
+    def display(self):
+        print(f"Name: {self.name}")
+        print(f"Breed: {self.breed}")
+
+d = Dog("Tommy", "Labrador")
+d.display()
+
+
+# Multiple Inheritance - Multiple are passed ,Mom + Dad → Child
+class Mom:
+    def cooking(self):
+        print("Mom can cook")
+
+class Dad:
+    def driving(self):
+        print("Dad can drive")
+
+class Child(Mom, Dad):
+    pass
+
+c = Child()
+c.cooking()
+c.driving()
+
+# Multilevel Inheritance - Y inherits X and then Z inherits Y ,Grandpa → Father → Son
+class Grandpa:
+    def land(self):
+        print("Grandpa has land")
+
+class Father(Grandpa):
+    def house(self):
+        print("Father has house")
+
+class Son(Father):
+    def car(self):
+        print("Son has car")
+
+s = Son()
+s.land()
+s.house()
+s.car()
+
+# Hierarchical Inheritance - Inherits from same super class , Vehicle → Car + Bike
+class Vehicle:
+    def start(self):
+        print("Vehicle starts")
+
+class Car(Vehicle):
+    def four_wheels(self):
+        print("Car has 4 wheels")
+
+class Bike(Vehicle):
+    def two_wheels(self):
+        print("Bike has 2 wheels")
+
+c = Car()
+b = Bike()
+
+c.start()
+c.four_wheels()
+b.start()
+b.two_wheels()
 
 
 class Model:
@@ -62,19 +119,26 @@ upi=UPI()
 print(upi.pay())
 
 # Polimorphism: allows the same method name to have different behaviours based on the object.
-class Cat:
+# Method Overriding (Runtime Polymorphism)
+class Animal:
     def sound(self):
-        return "Meow"
+        return "Animal Sound"
 
-class Dog:
+class Dog(Animal):
     def sound(self):
         return "Bark"
 
-def animal_sound(animal):
-    return animal.sound()   
+dog = Dog()
+print(dog.sound())
 
-cat = Cat()
-print(animal_sound(cat))
+# Method Overloading (Compile-time style in Python)
+class Math:
+    def add(self, a, b=0, c=0):
+        return a + b + c
+
+m = Math()
+print(m.add(2, 3))
+print(m.add(2, 3, 4))
 
 # Interview Questions
 # Goal/Benefits of using oops
@@ -120,7 +184,7 @@ Examples:
 2. __str__: Defines string representation of an object.
 3. __add__: Defines behavior for the + operator.
 4. __len__: Defines behavior for the len() function.
-5.__iter__: Returns an iterator object for iteration."""
+5. __iter__: Returns an iterator object for iteration."""
 
 # What is MRO?
 """Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes."""
