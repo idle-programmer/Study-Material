@@ -78,3 +78,9 @@ Difference between authentication and authorization?
 Authentication verifies a user's identity (who you are) using credentials like passwords or biometrics, 
 while Authorization determines their permissions (what you can do) after login.
 
+how do you design an api?
+->When designing an API, I first understand the business requirements and identify the resources involved. 
+I then design RESTful endpoints, define request and response schemas, implement authentication and authorization, 
+add proper validation and error handling, and use appropriate HTTP status codes. I also consider pagination, 
+filtering, caching, and API versioning for scalability. Finally, I document the APIs using Swagger/OpenAPI and 
+ensure security, monitoring, and logging are in place before deployment.

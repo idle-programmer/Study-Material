@@ -184,7 +184,8 @@ Examples:
 2. __str__: Defines string representation of an object.
 3. __add__: Defines behavior for the + operator.
 4. __len__: Defines behavior for the len() function.
-5. __iter__: Returns an iterator object for iteration."""
+5. __iter__: Returns an iterator object for iteration.
+6. __new__: Creating and returning a new instance"""
 
 # What is MRO?
 """Method Resolution Order (MRO) is the order in which Python looks for a method in a hierarchy of classes."""

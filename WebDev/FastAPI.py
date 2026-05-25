@@ -1,4 +1,4 @@
-# imp components fastapi
+# imp components of fastapi
 """FastAPI consists of path operations, Pydantic models for validation, dependency injection, middleware, 
 exception handling, background tasks, security utilities, and automatic API documentation powered by OpenAPI."""
 
@@ -21,3 +21,10 @@ limit-offset logic or use fastapi-pagination for production-ready APIs."""
 """In FastAPI, when using SQLAlchemy ORM, the N+1 query problem can be avoided by eager loading 
 relationships using options like joinedload(), selectinload(), or subqueryload(). These allow related 
 data to be fetched efficiently in fewer queries, similar to Django's select_related and prefetch_related."""
+
+# What is dependency injection ?
+"""Dependency Injection is a design pattern in which dependencies required by a class or function are provided 
+from outside rather than being created internally. It helps in loose coupling, better testability, maintainability, 
+and cleaner architecture. DI in FastAPI allows reusable components like DB sessions, authentication logic, 
+and services to be automatically provided to route handlers using Depends(), improving modularity, maintainability, 
+and testability."""
