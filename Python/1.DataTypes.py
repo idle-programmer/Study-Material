@@ -85,9 +85,11 @@ These data types allow you to store and manipulate different kinds of data in Py
 Examples of mutable data types include lists, dictionaries, and sets."""
 
 #4.What is range and xrange in Python?
-""" In Python 2, range() returns a list of numbers, while xrange() returns an xrange object that 
-generates numbers on demand (more memory efficient). In Python 3, xrange() is removed, and range() 
-behaves like xrange() from Python 2, returning a range object that generates numbers on demand. """
+""" In Python 2, range() creates the entire sequence in memory while xrange() generates values 
+lazily, making it more memory efficient. 
+
+In Python 3, xrange() was removed and range() now behaves like xrange(), providing lazy 
+evaluation and better memory usage. """
 
 #Is python compiled lang or interpreted lang? Why?
 """Python is interpreted because there's no separate compilation step—you run source code directly.

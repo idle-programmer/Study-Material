@@ -60,3 +60,13 @@ range is a built-in iterable that generates numbers on demand without storing th
 | Return type | Single value / None                      | Generator object (iterator)          |
 | Memory      | Creates all data first                   | Lazy - generates one value at a time |
 | Reusable    | Yes                                      | No - exhausted after one iteration   |"""
+
+
+# can you reverse a generator in python
+"""
+No, a generator cannot be reversed directly because it does not support random access or know its length.
+
+A generator produces values lazily, one at a time. It doesn't store all values in memory and doesn't 
+know the total number of items beforehand. Since reversing requires access to items from the end, 
+Python cannot reverse a generator without first consuming it completely.
+"""

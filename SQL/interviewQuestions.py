@@ -63,3 +63,30 @@ FROM products
 GROUP BY category
 HAVING COUNT(product_id) > 5;
 """
+
+# Diff betw "IN" and "BETWEEN"
+"""IN is used to filter rows based on a list of specific values, while BETWEEN is used 
+to filter rows within a range.Also, BETWEEN is inclusive of both boundary values."""
+
+# View in DBMS
+"""A View is a virtual table based on a SQL query. It is mainly used for security, simplifying 
+complex queries, data abstraction, and reusability because it presents data from one or more tables 
+without storing the data itself. """
+
+
+# Diff between postgres and mysql
+"""
+| Feature                     | PostgreSQL (Postgres)                                         | MySQL                                                             |
+| --------------------------- | ------------------------------------------------------------- | ----------------------------------------------------------------- |
+| **Database Type**           | Object-Relational Database Management System (ORDBMS)         | Relational Database Management System (RDBMS)                     |
+| **Connection Model**        | Process-per-connection (separate OS process)                  | Thread-per-connection (separate thread)                           |
+| **Transactional DDL**       | ✅ Supported (Roll back a schema change)                      | ❌ Not supported (Schema changes auto-commit)                     |
+| **JSON Support**            | Native JSON & JSONB (binary JSON with indexing)               | JSON supported, but less powerful than JSONB                      |
+| **Materialized Views**      | ✅ Supported                                                  | ❌ Not supported natively                                         |
+| **Best Use Cases**          | Enterprise applications, FinTech, Analytics, Complex Systems  | Web applications, CMS, E-commerce, Read-heavy workloads           |
+
+
+PostgreSQL provides powerful schema support, which makes implementing multi-tenant SaaS applications easier. 
+Each tenant can have its own schema within the same database, providing better data isolation compared to 
+storing all tenants in shared tables with a tenant_id column.
+"""

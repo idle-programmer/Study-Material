@@ -84,3 +84,7 @@ I then design RESTful endpoints, define request and response schemas, implement 
 add proper validation and error handling, and use appropriate HTTP status codes. I also consider pagination, 
 filtering, caching, and API versioning for scalability. Finally, I document the APIs using Swagger/OpenAPI and 
 ensure security, monitoring, and logging are in place before deployment.
+
+
+What are the python packages have you used?
+-> DRF, psycopg2, gunicorn, Redis, boto3, SimpleJWT, FastAPI & Pydantic, Celery
