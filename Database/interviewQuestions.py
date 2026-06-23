@@ -90,3 +90,22 @@ PostgreSQL provides powerful schema support, which makes implementing multi-tena
 Each tenant can have its own schema within the same database, providing better data isolation compared to 
 storing all tenants in shared tables with a tenant_id column.
 """
+
+# What are Window Functions in SQL?
+""" A window function performs calculations across a set of rows related to the current row without collapsing 
+the result set. Unlike GROUP BY, which combines multiple rows into a single row, window functions retain 
+all rows and add calculated values.
+
+major use cases:
+Ranking: Find top employees in each department.
+Running Totals: Sales tracking, Revenue dashboards
+Previous/Next Row Analysis: Stock price comparisons, Customer order analysis
+Moving Averages: Sales trends,Forecasting
+"""
+
+# If we have DENSE_RANK(), why do we also have RANK()?
+"""
+ROW_NUMBER() → Unique sequence for every row.
+RANK() → Same rank for ties, leaves gaps.
+DENSE_RANK() → Same rank for ties, no gaps."""
+

@@ -23,3 +23,29 @@ Always read critical financial data from the source of truth (database).
 UPDATE, or DELETE operations.
 Indexes also consume additional storage and may be ineffective on low-cardinality 
 columns such as status values like SUCCESS, FAILED, and PENDING.""" 
+
+
+# How to make your python application secured mention list of security measures ?
+"""
+1. Authentication & Authorization
+Strong Password Storage, JWT Security, Role-Based Access Control (RBAC)
+2. API Security
+Rate Limiting, Input Validation, Request Size Limits
+3. Prevent SQL Injection
+4. XSS Protection
+5. CSRF Protection
+6. HTTPS Everywhere
+7. Secure Headers
+8. Secrets Management
+9. File Upload Security
+10. Database Security
+11. Logging & Monitoring
+12. Secure Session Management
+13. CORS Security
+14. Dependency Security
+15. Disable Debug Mode
+16. API Permissions
+17. Server Security
+"""
+
+# 

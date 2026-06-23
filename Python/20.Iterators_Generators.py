@@ -39,8 +39,10 @@ Django QuerySets"""
 # Interview Question
 
 """UseCases of Iterators
-* When querying millions of rows from a database, loading all rows in memory is impossible. Backend teams use iterators to stream rows gradually.
-* DevOps or backend systems must read huge log files where loading entire file is impossible, so iterators are used to read file in chunk. Avoids memory overflow.
+* When querying millions of rows from a database, loading all rows in memory is impossible. 
+Backend teams use iterators to stream rows gradually.
+* DevOps or backend systems must read huge log files where loading entire file is impossible, so 
+iterators are used to read file in chunk. Avoids memory overflow.
 * APIs (Django/FastAPI/Flask) often need to process items in batches."""
 
 # Generators vs Iterators
@@ -49,8 +51,8 @@ Django QuerySets"""
 
 """An iterable is any object that can be looped over, like a list or range. 
 An iterator is an object that keeps track of iteration state and returns elements using next(). 
-A generator is a special type of iterator created using the yield keyword that produces values lazily and is memory efficient. 
-range is a built-in iterable that generates numbers on demand without storing them in memory."""
+A generator is a special type of iterator created using the yield keyword that produces values lazily and 
+is memory efficient. range is a built-in iterable that generates numbers on demand without storing them in memory."""
 
 # Difference b/w normal function and generator function
 """| Aspect   | Normal Function                          | Generator Function                   |

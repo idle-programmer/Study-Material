@@ -30,3 +30,23 @@ outer()
 # What is Global and Local scope in Python?
 """Global scope = module-level variables (accessible everywhere for reading). 
 Local scope = function-level variables (only accessible inside that function)."""
+
+# Closure in python 
+"""In Python, a closure is a nested function object that retains access to variables 
+from its enclosing (outer) scope even after the outer function has finished executing"""
+
+def make_multiplier(factor):
+    # Enclosing scope variable: factor
+    def multiplier(number):
+        # Inner function accesses factor from the enclosing scope
+        return number * factor
+    return multiplier  # Return the function object
+
+# Create a closure that "remembers" factor = 2
+double = make_multiplier(2)
+
+# Create a closure that "remembers" factor = 3
+triple = make_multiplier(3)
+
+print(double(5))  # Output: 10
+print(triple(5))  # Output: 15
