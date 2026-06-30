@@ -159,3 +159,15 @@ Implement JWT authentication with rate limiting,
 Protect secrets using environment variables, 
 Secure deployment using Nginx, SSL, 
 Restricted database access.
+
+* In Django models, we often use null=True and blank=True. What is the difference between these two options?
+I understand that null=True allows NULL values in the database, but I'm confused about blank=True. 
+Since relational databases don't have a concept of a "blank" column—only NULL or actual values—
+what does blank=True actually do, and where is it enforced?
+-> null=True affects the database schema. It tells the database that a column can store NULL values. 
+blank=True affects Django's validation layer. It allows forms, the admin, and model validation to accept 
+an empty value. Databases don't have a concept of "blank"; they only distinguish between NULL and actual 
+values such as an empty string (""). For CharField and TextField, Django generally recommends using 
+blank=True without null=True to avoid having two different representations of "no data" (NULL and ""). 
+For fields like DateField, ForeignKey, or ImageField, it's common to use both null=True and blank=True 
+when the field is optional.

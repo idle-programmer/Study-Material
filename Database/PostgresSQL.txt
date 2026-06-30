@@ -46,7 +46,6 @@ Run EXPLAIN/EXPLAIN ANALYZE to inspect execution plans
 COUNT(),SUM(),AVG(),MIN() and MAX()
 ​
 
-
 *What is the datatype to store array ? -> Array
 *What is the datatype to store json ? -> JSONB
 

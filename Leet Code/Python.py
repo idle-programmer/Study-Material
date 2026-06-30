@@ -62,7 +62,7 @@ for i in l:
 for pair in pairs:
     print(pair)
 
-#add digits until a single digit remains
+# add digits until a single digit remains
 num = 38
 if num==0:
     num=0
@@ -132,7 +132,6 @@ k = 4
 print(heapq.nlargest(k, lst)[-1])
 
 
-
 # longest substr of unique elements op: mehulkanojiy
 str1="mehulkanojiya"
 def get_longest_substr(str1):
@@ -145,14 +144,14 @@ def get_longest_substr(str1):
         while str1[right] in seen:
             seen.remove(str1[left])
             left+=1
-        # adding checked item 
+        # adding checked item
         seen.add(str1[right])
-        
+
         # calculating index points
         if right - left +1 >max_l:
             max_l = right - left + 1
             start_i = left
-            
+
     return str1[start_i:start_i+max_l]
 
 
@@ -176,3 +175,35 @@ def get_longest_substr(str1):
 
 # diff = DeepDiff(obj1, obj2)
 # print(diff)
+
+
+# flat Dictionay
+inp = {
+    "user": {
+        "id": 10,
+        "profile": {"name": "John", "contacts": {"email": "a@b.com", "phone": "1234"}},
+    }
+}
+out = {
+    "user.id": 10,
+    "user.profile.name": "John",
+    "user.profile.contacts.email": "a@b.com",
+    "user.profile.contacts.phone": "1234",
+}
+
+def flatten_dict(d, parent_key="", result=None):
+    if result is None:
+        result = {}
+
+    for key, value in d.items(): 
+        new_key = f"{parent_key}.{key}" if parent_key else key
+
+        if isinstance(value, dict):
+            flatten_dict(value, new_key, result)
+        else:
+            result[new_key] = value
+
+    return result
+
+
+print(flatten_dict(inp))

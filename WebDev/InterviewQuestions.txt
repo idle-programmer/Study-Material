@@ -88,3 +88,11 @@ ensure security, monitoring, and logging are in place before deployment.
 
 What are the python packages have you used?
 -> DRF, psycopg2, gunicorn, Redis, boto3, SimpleJWT, FastAPI & Pydantic, Celery
+
+how to decide the number of worker in gunicorn?
+-> The standard formula assumes that for every CPU core, one worker process will be processing 
+a request while the other is waiting on network or disk I/O.
+Workers=(2 x CPU Cores) + 1
+1 Core Machine: 3 Workers
+2 Core Machine: 5 Workers
+4 Core Machine: 9 Workers

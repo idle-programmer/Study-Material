@@ -35,3 +35,18 @@ CACHES = {
 }
 # redis.conf: maxmemory 256mb
 # maxmemory-policy allkeys-lru
+
+
+# If your server crashes/restarts on which redis is hosted, how will you retrive the data stored on redis?
+-> Redis stores data in memory, so if a standalone Redis instance crashes, data may be lost. 
+In production, I would use Redis persistence (RDB/AOF) and preferably Redis replication through AWS ElastiCache.
+RDB (Redis Database Snapshot)
+AOF (Append Only File)
+
+
+# Why did you choose Redis for OTP storage and validation? Couldn't you achieve the same functionality using 
+PostgreSQL by storing the OTP with a 5-minute expiration time? Why use Redis instead?
+-> Yes, storing OTPs in PostgreSQL is absolutely possible. In fact, many applications do it. However, 
+Redis is usually preferred because OTPs are temporary, high-frequency data. Redis is an in-memory data store 
+with built-in key expiration, making reads and writes extremely fast while avoiding unnecessary load on the 
+primary database.
